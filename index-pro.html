@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dravknox Studios: Creative Studio</title>
+  <meta name="description" content="Dravknox Studios, an independent creative studio spanning tech, creative work, and music. Three divisions. One founder. Built to last."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style-pro.css"/>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- NAVIGATION: scrolls, highlights active links, has a mobile menu. it behaves. -->
+<nav class="nav" id="pro-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Dravknox Studios home">
+      <span class="nav-logo-wordmark">Dravknox</span>
+      <span class="nav-logo-tag">Studios</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="#divisions" class="nav-link" data-target="divisions" role="listitem">Divisions</a>
+      <a href="#projects"  class="nav-link" data-target="projects"  role="listitem">Projects</a>
+      <a href="#about"     class="nav-link" data-target="about"     role="listitem">About</a>
+      <a href="#news"      class="nav-link" data-target="news"      role="listitem">News</a>
+      <a href="#faq"       class="nav-link" data-target="faq"       role="listitem">FAQ</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" aria-pressed="false">
+      <span class="theme-toggle-icon" aria-hidden="true">2600Fe0e</span>
+      <span class="theme-toggle-label">Light</span>
+    </button>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- mobile menu: hidden until the hamburger is clicked. classic. -->
+<div class="nav-mobile-menu" id="nav-mobile-menu" aria-label="Mobile navigation">
+  <a href="#divisions" class="nav-mobile-link">Divisions</a>
+  <a href="#projects"  class="nav-mobile-link">Projects</a>
+  <a href="#about"     class="nav-mobile-link">About</a>
+  <a href="#news"      class="nav-mobile-link">News</a>
+  <a href="#faq"       class="nav-mobile-link">FAQ</a>
+  <a href="#contact"   class="nav-mobile-link">Get in touch</a>
+</div>
+
+<main id="main-content">
+
+  <!-- HERO: the first thing you see. tagline, subtext, three fake product cards. -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="hero-tag-dot" aria-hidden="true"></span>
+          <span class="hero-tag-text">All systems operational</span>
+        </div>
+        <h1 class="t-display hero-h1 anim-fade-up">
+          You'll own everything<br>
+          <em>and be happier.</em><br>
+        </h1>
+        <p class="hero-sub anim-fade-up anim-delay-1">
+          No subscriptions. No bloat. No Philippe Tremblay. One founder. Three divisions. Built to last.
+        </p>
+        <div class="hero-actions anim-fade-up anim-delay-2">
+          <a href="#projects" class="btn-primary">
+            Explore projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#about" class="btn-secondary">About the studio</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hero-card hcard-dk">
+            <div class="hcard-dot"></div>
+            <div class="hcard-label">Talvrek</div>
+            <div class="hcard-name">COMING SOON</div>
+            <div class="hcard-desc">We're just getting started. The names are done, the products will be too. Please Stand By.</div>
+          </div>
+          <div class="hero-card hcard-vl">
+            <div class="hcard-dot"></div>
+            <div class="hcard-label">Embrvaal</div>
+            <div class="hcard-name">COMING SOON</div>
+            <div class="hcard-desc">We're just getting started. The names are done, the products will be too. Please Stand By.</div>
+          </div>
+          <div class="hero-card hcard-em">
+            <div class="hcard-dot"></div>
+            <div class="hcard-label">Veltrun</div>
+            <div class="hcard-name">COMING SOON</div>
+            <div class="hcard-desc">We're just getting started. The names are done, the products will be too. Please Stand By.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND: four numbers. they look good. update them when they change. -->
+  <div class="stats-band" aria-label="Studio statistics">
+    <div class="container">
+      <div class="stat-block">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Projects released</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Downloads this month</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Active divisions</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Founder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVISIONS: the three cards. clicking one filters projects and scrolls down. two for one. -->
+  <section class="section divisions" id="divisions" data-section="divisions" aria-label="Divisions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-text">
+          <span class="t-label section-label">Three divisions</span>
+          <h2 class="t-display-sm">One studio, three distinct worlds.</h2>
+        </div>
+      </div>
+
+      <div class="div-grid" role="list">
+
+        <div class="div-card div-card-dk reveal" data-brand="dk" role="listitem" tabindex="0" aria-label="Talvrek division: click to filter projects">
+          <div class="div-card-icon" aria-hidden="true">⚡</div>
+          <div>
+            <div class="div-card-label">Division 01</div>
+            <div class="div-card-name">Talvrek</div>
+          </div>
+          <p class="div-card-desc">
+            The tech and software division. FOSS-first apps, Python tools, and web apps built for everyday people and indie devs alike. Anti-Adobe, anti-bloat, anti-subscription. Software that does what it says and keeps doing it.
+          </p>
+          <div class="div-card-tags">
+            <span class="div-tag">Tech</span>
+            <span class="div-tag">Dev</span>
+            <span class="div-tag">Systems</span>
+          </div>
+          <div class="div-card-arrow">
+            View projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="div-card div-card-vl reveal anim-delay-1" data-brand="vl" role="listitem" tabindex="0" aria-label="Embrvaal division: click to filter projects">
+          <div class="div-card-icon" aria-hidden="true">🎮</div>
+          <div>
+            <div class="div-card-label">Division 02</div>
+            <div class="div-card-name">Embrvaal</div>
+          </div>
+          <p class="div-card-desc">
+            The creative division. Story-driven, stylized-realistic 3D action-adventure games built in Godot. Blender renders. Pure creative output, zero compromise, optimized to run on hardware you actually own.
+          </p>
+          <div class="div-card-tags">
+            <span class="div-tag">Art</span>
+            <span class="div-tag">Games</span>
+            <span class="div-tag">Writing</span>
+          </div>
+          <div class="div-card-arrow">
+            View projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="div-card div-card-em reveal anim-delay-2" data-brand="em" role="listitem" tabindex="0" aria-label="Veltrun division: click to filter projects">
+          <div class="div-card-icon" aria-hidden="true">🎧</div>
+          <div>
+            <div class="div-card-label">Division 03</div>
+            <div class="div-card-name">Veltrun</div>
+          </div>
+          <p class="div-card-desc">
+            The music division. Rock, Nu Metal, and Synthwave, remixed from CC0 sources and tuned for the games and worlds Embrvaal builds. Loud by design. On YouTube.
+          </p>
+          <div class="div-card-tags">
+            <span class="div-tag">Music</span>
+            <span class="div-tag">Audio</span>
+            <span class="div-tag">Sound</span>
+          </div>
+          <div class="div-card-arrow">
+            View projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS: the grid. populated by pro.js from PROJECTS in data.js. all placeholders for now. -->
+  <section class="section projects" id="projects" data-section="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-text">
+          <span class="t-label section-label">Projects</span>
+          <h2 class="t-display-sm">The work.</h2>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter projects by division">
+        <button class="filter-btn on" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dk">Talvrek</button>
+        <button class="filter-btn" data-filter="vl">Embrvaal</button>
+        <button class="filter-btn" data-filter="em">Veltrun</button>
+      </div>
+
+      <div class="proj-grid" id="proj-grid" role="list" aria-label="Project cards">
+        <!-- pro.js fills this in at runtime from PROJECTS in data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT: founder bio, skills, and contact block. the human section. -->
+  <section class="section about" id="about" data-section="about" aria-label="About the founder">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-card">
+            <div class="about-avatar" aria-hidden="true">FD</div>
+            <div class="about-name">Dakiee</div>
+            <div class="about-role">Founder · Lead Developer · Dravknox Studios</div>
+            <p class="about-bio">
+              Solo developer, 3D artist, and music remixer behind all three divisions.
+              Been juggling code, games, and sound since 2020. Dravknox is just what
+              happened when he stopped pretending they were separate hobbies.
+            </p>
+            <div class="about-skills" aria-label="Skills">
+              <span class="skill-tag skill-tag-dk">Python Dev</span>
+              <span class="skill-tag skill-tag-dk">Web Apps</span>
+              <span class="skill-tag skill-tag-em">Godot</span>
+              <span class="skill-tag skill-tag-em">Blender</span>
+              <span class="skill-tag skill-tag-vl">Audacity</span>
+            </div>
+          </div>
+          <div class="about-decor" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-content reveal anim-delay-1">
+          <span class="t-label" style="margin-bottom:16px;display:block;">About the studio</span>
+          <p class="about-tagline">
+            "Built by someone who refused to pick just one discipline, or put up with software that forgets who it's for."
+          </p>
+          <div class="about-body">
+            <p class="t-body" style="margin-bottom:14px;">
+              Dravknox Studios is the umbrella for three distinct creative operations. Talvrek handles the tech: FOSS apps and tools that replace the bloated, subscription-locked garbage you've been tolerating. Embrvaal is where the games and 3D art live. Veltrun handles the sound.
+            </p>
+            <p class="t-body">
+              All three run on the same conviction: software and games should be built for the people who actually use them. Optimized for average hardware. No strings attached. No enshittification roadmap.
+            </p>
+          </div>
+
+          <div class="about-contact-block" id="contact" aria-label="Contact information">
+            <span class="about-contact-label">Open channels</span>
+            <div class="contact-row">
+              <span class="contact-row-brand" style="color:var(--ink-3);">Status</span>
+              <span class="contact-row-val">We're just getting started. The names are done, the channels will be too. Please Stand By.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS: populated by pro.js from NEWS_DATA. currently one item. that is fine. -->
+  <section class="section-sm news" id="news" data-section="news" aria-label="Studio news">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-text">
+          <span class="t-label section-label">Latest updates</span>
+          <h2 class="t-display-sm">News from all divisions.</h2>
+        </div>
+      </div>
+      <div class="news-list" id="news-list" aria-live="polite">
+        <!-- pro.js fills this in at runtime from NEWS_DATA in data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: the chatbot section. same faq.js as the OS site, just dressed differently. -->
+  <section class="section faq-section" id="faq" data-section="faq" aria-label="FAQ assistant">
+    <div class="container-narrow">
+      <div class="section-header" style="flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:40px;">
+        <span class="t-label section-label">Got questions?</span>
+        <h2 class="t-display-sm">Ask the assistant.</h2>
+        <p class="t-body" style="margin-top:6px;">Our embedded assistant knows everything about the studio: projects, downloads, licensing, and more.</p>
+      </div>
+
+      <!-- faq.js uses these exact IDs. styles are overridden in style-pro.css. do not rename them. -->
+      <div class="faq-pro-wrap" role="region" aria-label="FAQ chatbot">
+        <div class="faq-pro-header">
+          <span class="faq-pro-title">DK_ASSIST · Knowledge Base</span>
+          <div class="faq-pro-status">
+            <div class="faq-pro-dot" aria-hidden="true"></div>
+            <span class="faq-pro-status-txt">Online</span>
+          </div>
+        </div>
+        <div class="faq-msgs" id="faq-msgs" role="log" aria-live="polite" aria-label="FAQ chat messages"></div>
+        <div class="faq-sugs" id="faq-sugs" aria-label="Suggested questions"></div>
+        <div class="faq-input-row">
+          <input type="text" id="faq-inp" class="faq-inp" placeholder="Ask anything about the studio…" autocomplete="off" spellcheck="false" aria-label="Type your question"/>
+          <button class="faq-send" id="faq-send" aria-label="Send message">↗</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER: links, copyright, and the button to enter the OS version. -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Dravknox Studios</div>
+        <p class="footer-brand-desc">
+          Independent creative studio. Apps, games, 3D art, music remixes.
+          Built by consumers, for consumers. Three divisions, one founder, zero regrets.
+        </p>
+        <div style="margin-top:20px;">
+          <button class="footer-switch-btn" data-switch-site aria-label="Enter the DRAVKNOX universe">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="6" cy="6" r="2" fill="currentColor"/>
+            </svg>
+            Enter the DRAVKNOX universe
+          </button>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-label">Talvrek</span>
+        <span class="footer-link">Please Stand By</span>
+      </div>
+      <div>
+        <span class="footer-col-label">Embrvaal</span>
+        <span class="footer-link">Please Stand By</span>
+      </div>
+      <div>
+        <span class="footer-col-label">Veltrun</span>
+        <span class="footer-link">Please Stand By</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dravknox Studios. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <span>Channels coming soon. Please Stand By.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PROJECT MODAL: the overlay that pops when you click a project card. built by pro.js. -->
+<div class="modal-overlay" id="proj-modal" role="dialog" aria-modal="true" aria-label="Project details" aria-hidden="true">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-icon" id="modal-icon" aria-hidden="true"></div>
+      <div class="modal-header-text">
+        <div class="modal-name" id="modal-name"></div>
+        <div class="modal-brand" id="modal-brand"></div>
+      </div>
+      <button class="modal-close" aria-label="Close project details">✕</button>
+    </div>
+    <div class="modal-tabs" id="modal-tabs" role="tablist"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- scripts: data.js has all the content, faq.js is the chatbot, pro.js runs the rest. load order matters. -->
+<script src="js/data.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/pro.js"></script>
+
+</body>
+</html>

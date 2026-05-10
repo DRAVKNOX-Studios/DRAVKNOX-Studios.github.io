@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dravknox Studios: Payne-less UI: Great Grand-daddy</title>
+  <meta name="description" content="Dravknox Studios, an independent creative studio spanning tech, creative work, and music. Three divisions. One founder. Built to last."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="root" id="R">
+
+  <!-- BOOT SCREEN: pick your division. four choices. no wrong answers. (probably.) -->
+  <div class="screen active" id="sb" role="main" aria-label="Brand selection boot screen">
+    <div class="boot-scanlines"></div>
+    <div class="boot-grid"></div>
+    <div class="boot-center">
+      <div class="boot-label">// INITIALIZING Payne-less UI: Great Grand-daddy</div>
+      <div class="boot-title">Payne-less UI: Great Grand-daddy</div>
+      <div class="boot-sub">SELECT YOUR DIVISION</div>
+      <div class="boot-prompt">-- choose a division to enter --</div>
+      <div class="boot-cards" role="list">
+
+        <div class="bcard pro-c" role="listitem" tabindex="0" id="boot-pro-card" aria-label="Enter Professional site">
+          <div class="bem pro-em"><img src="assets/logo/DRAVKNOX Studio 4k.png" alt="Dravknox Studio" style="width:40px;height:40px;object-fit:contain;"></div>
+          <div class="bn">DRAVKNOX</div>
+          <div class="bsub">MAIN SITE<br>STUDIO HQ</div>
+          <div class="btag pro-tag">PRO SITE</div>
+        </div>
+
+        <div class="bcard dk-c" role="listitem" tabindex="0" data-brand="dk" aria-label="Enter Talvrek division">
+          <div class="bem"><img src="assets/logo/Talvrek 4k.png" alt="Talvrek" style="width:40px;height:40px;object-fit:contain;"></div>
+          <div class="bn">TALVREK</div>
+          <div class="bsub">TECH · DEV<br>SYSTEMS</div>
+          <div class="btag">TECH</div>
+        </div>
+
+        <div class="bcard vl-c" role="listitem" tabindex="0" data-brand="vl" aria-label="Enter Embrvaal division">
+          <div class="bem"><img src="assets/logo/Embrvaal 4k.png" alt="embrvaal" style="width:40px;height:40px;object-fit:contain;"></div>
+          <div class="bn">EMBRVAAL</div>
+          <div class="bsub">ART · GAMES<br>WRITING</div>
+          <div class="btag">CREATIVE</div>
+        </div>
+
+        <div class="bcard em-c" role="listitem" tabindex="0" data-brand="em" aria-label="Enter Veltrun division">
+          <div class="bem"><img src="assets/logo/Veltrun 4k.png" alt="veltrun" style="width:40px;height:40px;object-fit:contain;"></div>
+          <div class="bn">VELTRUN</div>
+          <div class="bsub">MUSIC · AUDIO<br>SIGNAL</div>
+          <div class="btag">MUSIC</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="boot-footer">DRAVKNOX STUDIOS &nbsp;·&nbsp; ALL DIVISIONS OPERATIONAL &nbsp;·&nbsp; Payne-less UI: Great Grand-daddy</div>
+  </div>
+
+  <!-- TALVREK DESKTOP: the tech division screen. red. sharp. no-nonsense. -->
+  <div class="screen" id="sdk" data-theme="dk">
+    <div class="desk">
+      <div class="bgrid"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="scanlines"></div>
+
+      <div class="icons-left">
+        <div class="di shared-trigger" data-shared="founder" tabindex="0" aria-label="About Founder"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
+      </div>
+      <div class="icons-right">
+        <div class="di" data-win="dk-about" tabindex="0" aria-label="About Talvrek"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
+        <div class="di shared-trigger" data-shared="news" tabindex="0" aria-label="News"><div class="dib">📡</div><div class="dil">NEWS</div></div>
+        <div class="di shared-trigger" data-shared="contact" tabindex="0" aria-label="Contact"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
+        <div class="di shared-trigger" data-shared="faq" tabindex="0" aria-label="FAQ Bot"><div class="dib">🤖</div><div class="dil">FAQ</div></div>
+      </div>
+
+      <div class="hdr-widget">
+        <div class="hey">// DRAVKNOX STUDIOS</div>
+        <div class="hna">TALVREK</div>
+        <div class="hsl">Systems that outlast empires.</div>
+        <div class="hdiv"></div>
+        <div class="htags">
+          <span class="htag">SOFTWARE</span>
+          <span class="htag">APPS</span>
+          <span class="htag">FOSS</span>
+          <span class="htag">ANTI-BLOAT</span>
+        </div>
+      </div>
+
+      <!-- division windows (the ones that are actually open right now): -->
+      <!-- dk-apps, dk-scripts, dk-tools removed. products coming soon. -->
+
+      <div class="win" id="dk-about" style="width:310px;height:220px;top:68px;left:120px;">
+        <div class="wbar" data-win="dk-about"><div class="wbtns"><button class="wb cl" data-close="dk-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT TALVREK</div></div>
+        <div class="wbody about-body">
+          <p class="ab-label">SOFTWARE DIVISION · FOSS-FIRST</p>
+          <p class="ab-text">Talvrek builds apps and tools for everyday people and indie devs. Python, web apps, and whatever else needs building. FOSS by default. Anti-bloat, anti-subscription, anti-Adobe. Software that works and keeps working.</p>
+          <p class="ab-slogan">Systems that outlast empires.</p>
+        </div>
+      </div>
+
+      <div class="ticker-wrap">
+        <div class="tkl">TK</div>
+        <div class="tkt-track"><span class="tks">◈ TALVREK: FOSS apps for people, not shareholders</span><span class="tksep">///</span><span class="tks">No subscriptions. No bloat. No Philippe Tremblay.</span><span class="tksep">///</span><span class="tks">Built by consumers, for consumers</span><span class="tksep">///</span><span class="tks">Systems that outlast empires.</span><span class="tksep">///</span></div>
+      </div>
+
+      <div class="tbar">
+        <button class="sbtn" data-sm="dk-sm">⬡ Payne-less UI: Great Grand-daddy</button>
+        <div class="tdiv"></div>
+        <div class="ttasks" id="dk-tb"></div>
+        <div class="tdiv"></div>
+        <div class="tray">
+          <span class="trico" title="Network">📡</span>
+          <span class="trico" title="Audio">🔊</span>
+          <div class="tclk" id="dk-clk">--:--</div>
+        </div>
+      </div>
+
+      <button class="bbtn" data-back>← BOOT</button>
+
+      <div class="smenu" id="dk-sm">
+        <div class="smhdr"><div class="smlogo">TALVREK</div></div>
+        <div class="smi" data-win="dk-about"><span class="si">🏢</span>About Division</div>
+        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
+        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
+        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
+        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>FAQ Bot</div>
+        <div class="smdiv"></div>
+        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMBRVAAL DESKTOP: the creative division screen. blue. cinematic. slightly unhinged. -->
+  <div class="screen" id="svl" data-theme="vl">
+    <div class="desk">
+      <div class="bgrid"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="scanlines"></div>
+
+      <div class="icons-left">
+        <div class="di shared-trigger" data-shared="founder" tabindex="0"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
+      </div>
+      <div class="icons-right">
+        <div class="di" data-win="vl-about" tabindex="0"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
+        <div class="di shared-trigger" data-shared="news" tabindex="0"><div class="dib dib-r">📡</div><div class="dil">NEWS</div></div>
+        <div class="di shared-trigger" data-shared="contact" tabindex="0"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
+        <div class="di shared-trigger" data-shared="faq" tabindex="0"><div class="dib">🤖</div><div class="dil">FAQ</div></div>
+      </div>
+
+      <div class="hdr-widget">
+        <div class="hey">// DRAVKNOX STUDIOS</div>
+        <div class="hna">EMBRVAAL</div>
+        <div class="hsl">Art that evokes WTF is that?</div>
+        <div class="hdiv"></div>
+        <div class="htags">
+          <span class="htag">GAMES</span>
+          <span class="htag htag-r">3D ART</span>
+          <span class="htag">GODOT</span>
+          <span class="htag htag-r">BLENDER</span>
+        </div>
+      </div>
+
+      <!-- vl-games, vl-art, vl-content, confidential removed. products coming soon. -->
+
+      <div class="win" id="vl-about" style="width:310px;height:215px;top:66px;left:118px;">
+        <div class="wbar" data-win="vl-about"><div class="wbtns"><button class="wb cl" data-close="vl-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT EMBRVAAL</div></div>
+        <div class="wbody about-body">
+          <p class="ab-label">CREATIVE DIVISION</p>
+          <p class="ab-text">Embrvaal makes story-driven, stylized-realistic 3D action-adventure games in Godot, built to run on hardware you actually own. Blender renders. Pure creative output. No filler, no padding, no 80GB day-one patch.</p>
+          <p class="ab-slogan">Art that evokes WTF is that?</p>
+        </div>
+      </div>
+
+      <div class="ticker-wrap">
+        <div class="tkl">EM</div>
+        <div class="tkt-track"><span class="tks">◈ EMBRVAAL: story-driven 3D games, optimized for your actual PC</span><span class="tksep">///</span><span class="tks">No 80GB patches. No battle passes. Just the game.</span><span class="tksep">///</span><span class="tks">Blender renders dropping soon</span><span class="tksep">///</span><span class="tks">Art that evokes WTF is that?</span><span class="tksep">///</span></div>
+      </div>
+
+      <div class="tbar">
+        <button class="sbtn" data-sm="vl-sm">⬡ Payne-less UI: Great Grand-daddy</button>
+        <div class="tdiv"></div>
+        <div class="ttasks" id="vl-tb"></div>
+        <div class="tdiv"></div>
+        <div class="tray">
+          <span class="trico">📡</span>
+          <span class="trico">🔊</span>
+          <div class="tclk" id="vl-clk">--:--</div>
+        </div>
+      </div>
+
+      <button class="bbtn" data-back>← BOOT</button>
+
+      <div class="smenu" id="vl-sm">
+        <div class="smhdr"><div class="smlogo">EMBRVAAL</div></div>
+        <div class="smi" data-win="vl-about"><span class="si">🏢</span>About Division</div>
+        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
+        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
+        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
+        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>FAQ Bot</div>
+        <div class="smdiv"></div>
+        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VELTRUN DESKTOP: the music division screen. orange. loud. exactly as intended. -->
+  <div class="screen" id="sem" data-theme="em">
+    <div class="desk">
+      <div class="bgrid"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="orb orb3"></div>
+      <div class="scanlines"></div>
+
+      <div class="icons-left">
+        <div class="di shared-trigger" data-shared="founder" tabindex="0"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
+      </div>
+      <div class="icons-right">
+        <div class="di" data-win="em-about" tabindex="0"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
+        <div class="di shared-trigger" data-shared="news" tabindex="0"><div class="dib dib-o">📡</div><div class="dil">NEWS</div></div>
+        <div class="di shared-trigger" data-shared="contact" tabindex="0"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
+        <div class="di shared-trigger" data-shared="faq" tabindex="0"><div class="dib">🤖</div><div class="dil">FAQ</div></div>
+      </div>
+
+      <div class="hdr-widget">
+        <div class="hey">// DRAVKNOX STUDIOS</div>
+        <div class="hna">VELTRUN</div>
+        <div class="hsl">Louder than it needs to be. Exactly as intended.</div>
+        <div class="hdiv"></div>
+        <div class="htags">
+          <span class="htag">ROCK</span>
+          <span class="htag htag-o">NU METAL</span>
+          <span class="htag htag-b">SYNTHWAVE</span>
+          <span class="htag htag-o">CC0 REMIXES</span>
+        </div>
+      </div>
+
+      <!-- em-music, em-sfx, em-live removed. products coming soon. -->
+
+      <div class="win" id="em-about" style="width:310px;height:215px;top:66px;left:118px;">
+        <div class="wbar" data-win="em-about"><div class="wbtns"><button class="wb cl" data-close="em-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT VELTRUN</div></div>
+        <div class="wbody about-body">
+          <p class="ab-label">MUSIC DIVISION</p>
+          <p class="ab-text">Veltrun is the music arm. Rock, Nu Metal, Synthwave, remixed from CC0 sources and tuned for the games Embrvaal builds. Find it on YouTube. Turn it up. Your neighbours will adapt.</p>
+          <p class="ab-slogan">Louder than it needs to be. Exactly as intended.</p>
+        </div>
+      </div>
+
+      <div class="ticker-wrap">
+        <div class="tkl">VL</div>
+        <div class="tkt-track"><span class="tks">◈ VELTRUN: Rock, Nu Metal &amp; Synthwave remixes on YouTube</span><span class="tksep">///</span><span class="tks">CC0 sources. Zero compromise on volume.</span><span class="tksep">///</span><span class="tks">Scored for Embrvaal games</span><span class="tksep">///</span><span class="tks">Louder than it needs to be. Exactly as intended.</span><span class="tksep">///</span></div>
+      </div>
+
+      <div class="tbar">
+        <button class="sbtn" data-sm="em-sm">⬡ Payne-less UI: Great Grand-daddy</button>
+        <div class="tdiv"></div>
+        <div class="ttasks" id="em-tb"></div>
+        <div class="tdiv"></div>
+        <div class="tray">
+          <span class="trico">📡</span>
+          <span class="trico">🔊</span>
+          <div class="tclk" id="em-clk">--:--</div>
+        </div>
+      </div>
+
+      <button class="bbtn" data-back>← BOOT</button>
+
+      <div class="smenu" id="em-sm">
+        <div class="smhdr"><div class="smlogo">VELTRUN</div></div>
+        <div class="smi" data-win="em-about"><span class="si">🏢</span>About Division</div>
+        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
+        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
+        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
+        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>FAQ Bot</div>
+        <div class="smdiv"></div>
+        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARED WINDOWS: same across all three divisions. open from any desktop. -->
+
+  <!-- FOUNDER window: the about page. one person. many hats. -->
+  <div class="shared-win" id="sw-founder" style="width:420px;height:360px;top:60px;left:140px;">
+    <div class="wbar" data-win="sw-founder"><div class="wbtns"><button class="wb cl" data-close-shared="founder"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT THE FOUNDER</div></div>
+    <div class="founder-layout">
+      <div class="founder-sidebar">
+        <div class="founder-avatar">FD</div>
+        <div class="founder-role">FOUNDER</div>
+        <div class="founder-titles">Developer<br>Lead Dev</div>
+        <div class="founder-divider"></div>
+        <div class="founder-links">
+        </div>
+      </div>
+      <div class="founder-content">
+        <div class="founder-name">DAKIEE</div>
+        <div class="founder-label">FOUNDER · LEAD DEVELOPER · DRAVKNOX STUDIOS</div>
+        <p class="founder-bio">Been building things across code, art, and music since 2020: separately, chaotically, and with zero plan. Dravknox Studios is what happened when it became obvious that trying to keep three creative lives apart was more work than just owning it. One person. Three divisions. Still no plan, but at least it has a name now.</p>
+        <div class="founder-skills-label">SKILLS</div>
+        <div class="founder-skills">
+          <span class="fskill fskill-nt">PYTHON DEV</span>
+          <span class="fskill fskill-nt">WEB APPS</span>
+          <span class="fskill fskill-gp">GODOT</span>
+          <span class="fskill fskill-gp">BLENDER</span>
+          <span class="fskill fskill-hz">AUDACITY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS window: what happened recently. spoiler: rebrand. -->
+  <div class="shared-win" id="sw-news" style="width:390px;height:340px;top:80px;left:150px;">
+    <div class="wbar" data-win="sw-news"><div class="wbtns"><button class="wb cl" data-close-shared="news"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// STUDIO NEWS FEED</div></div>
+    <div class="wbody">
+      <div class="news-header">◈ ALL DIVISIONS · LATEST TRANSMISSIONS</div>
+      <div class="news-item" data-brand-news="all">
+        <div class="news-date">2026.05.01 · ALL DIVISIONS</div>
+        <div class="news-title">Dravknox Studios: rebrand underway</div>
+        <div class="news-body">New accounts, new releases, everything under one roof. The names are done. The products will be too. Please stand by.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT window: socials and channels. coming soon. stand by. -->
+  <div class="shared-win" id="sw-contact" style="width:360px;height:290px;top:90px;left:155px;">
+    <div class="wbar" data-win="sw-contact"><div class="wbtns"><button class="wb cl" data-close-shared="contact"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// CONTACT.EXE</div></div>
+    <div class="wbody">
+      <div class="news-header">◈ OPEN CHANNELS · ALL DIVISIONS</div>
+      <div class="contact-card contact-p" style="margin-top:12px;">
+        <div class="cc-label">STATUS</div>
+        <div class="cc-val">We're just getting started. The names are done, the channels will be too. Please Stand By.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ BOT: DK_ASSIST. not AI. keyword matching with a great personality. -->
+  <div class="shared-win faq-win" id="sw-faq" style="width:420px;height:460px;top:55px;left:135px;">
+    <div class="wbar" data-win="sw-faq"><div class="wbtns"><button class="wb cl" data-close-shared="faq"></button><button class="wb mn"></button><button class="wb mx"></button></div>
+      <div class="wttl">// DK_ASSIST · FAQ BOT</div>
+      <div class="faq-status"><div class="faq-dot"></div><span class="faq-status-txt">ONLINE</span></div>
+    </div>
+    <div class="faq-msgs" id="faq-msgs" role="log" aria-live="polite" aria-label="FAQ chat messages"></div>
+    <div class="faq-sugs" id="faq-sugs" aria-label="Suggested questions"></div>
+    <div class="faq-input-row">
+      <input type="text" id="faq-inp" class="faq-inp" placeholder="ask anything about the studio..." autocomplete="off" spellcheck="false" aria-label="Type your question"/>
+      <button class="faq-send" id="faq-send" aria-label="Send message">↗</button>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL: opens when you click a project. tabs and everything. very professional. -->
+  <div class="shared-win proj-win" id="sw-proj" style="width:460px;height:420px;top:50px;left:120px;">
+    <div class="wbar" data-win="sw-proj"><div class="wbtns"><button class="wb cl" data-close-shared="proj"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl" id="proj-wttl">// PROJECT</div></div>
+    <div class="proj-tabs" id="proj-tabs" role="tablist"></div>
+    <div class="proj-panels" id="proj-panels"></div>
+  </div>
+
+</div><!-- end of the whole thing. you made it. -->
+
+<script src="js/data.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/os.js"></script>
+</body>
+</html>
