@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 DRAVKNOX STUDIOS
+Copyright (c) 2026 Dravknox Studios
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+BRANDING NOTICE
+
+The MIT License above applies to the code only. The following are the
+intellectual property of Dravknox Studios and are explicitly excluded from
+this license. They may not be reproduced, reused, or adapted without explicit
+written permission from Dravknox Studios:
+
+  - The name "Dravknox Studios" and all associated wordmarks
+  - Division names: "Talvrek", "Embrvaal", "Veltrun"
+  - The "Payne-less UI" name and branding
+  - All files under the assets/logo/ directory
+  - The name "Dakiee"
+  - All original written content, lore, and world-building material
+
+If you use this code as a template, replace all branding, logos, and content
+with your own before publishing or distributing your project.
