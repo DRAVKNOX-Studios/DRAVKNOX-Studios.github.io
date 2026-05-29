@@ -99,9 +99,16 @@ const ProSite = (() => {
           <div class="proj-card-open" aria-hidden="true">↗</div>
         </div>`;
 
-      card.addEventListener('click', () => openModal(key));
+      card.addEventListener('click', () => {
+        if (key === 'floppy_bird') { window.location.href = 'flappy-bird-pro.html'; return; }
+        openModal(key);
+      });
       card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(key); }
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (key === 'floppy_bird') { window.location.href = 'flappy-bird-pro.html'; return; }
+          openModal(key);
+        }
       });
       grid.appendChild(card);
     });

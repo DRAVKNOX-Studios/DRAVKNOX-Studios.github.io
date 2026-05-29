@@ -163,7 +163,7 @@ const OS = (() => {
     });
 
     openSharedWins.forEach(key => {
-      const labels = { founder:'FOUNDER', news:'NEWS', contact:'CONTACT', faq:'FAQ BOT', proj:'PROJECT' };
+      const labels = { founder:'FOUNDER', news:'NEWS', contact:'CONTACT', faq:'SIGIL', proj:'PROJECT' };
       const el = document.getElementById('sw-' + key);
       const isMin = el && el.classList.contains('minimized');
       const btn = createTaskBtn(labels[key] || key.toUpperCase(), isMin, () => {
@@ -292,21 +292,22 @@ const OS = (() => {
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
     vl: [
+      { ico: '🐦', lbl: 'FLOPPY BIRD', link: '404.html' },
       { ico: '🏢', lbl: 'ABOUT',   win: 'vl-about' },
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
     em: [
       { ico: '🏢', lbl: 'ABOUT',   win: 'em-about' },
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
   };
 
@@ -378,6 +379,7 @@ const OS = (() => {
           if (item.shared) openShared(item.shared);
           else if (item.win) openDesktopWin(item.win);
           else if (item.proj) Projects.open(item.proj);
+          else if (item.link) window.location.href = item.link;
         });
         btn.addEventListener('keydown', e => {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
@@ -446,6 +448,11 @@ const OS = (() => {
       el.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openDesktopWin(el.dataset.win); } });
     });
 
+    document.querySelectorAll('.di[data-link]').forEach(el => {
+      el.addEventListener('click', () => { window.location.href = el.dataset.link; });
+      el.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); window.location.href = el.dataset.link; } });
+    });
+
     // desktop icons that open project views (e.g. the Confidential folder, very spooky)
     document.querySelectorAll('.di[data-proj]').forEach(el => {
       el.addEventListener('click', () => Projects.open(el.dataset.proj));
@@ -457,6 +464,7 @@ const OS = (() => {
     });
 
     document.querySelectorAll('.smi[data-win]').forEach(el => el.addEventListener('click', () => openDesktopWin(el.dataset.win)));
+    document.querySelectorAll('.smi[data-link]').forEach(el => el.addEventListener('click', () => { window.location.href = el.dataset.link; }));
     document.querySelectorAll('.smi[data-back]').forEach(el => el.addEventListener('click', goBack));
 
     // start menu items that also open project views (yes both places. consistency.)
@@ -570,21 +578,22 @@ const OS = (() => {
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
     vl: [
+      { ico: '🐦', lbl: 'FLOPPY BIRD', link: '404.html' },
       { ico: '🏢', lbl: 'ABOUT',   win: 'vl-about' },
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
     em: [
       { ico: '🏢', lbl: 'ABOUT',   win: 'em-about' },
       { ico: '👤', lbl: 'FOUNDER', shared: 'founder' },
       { ico: '📡', lbl: 'NEWS',    shared: 'news' },
       { ico: '📨', lbl: 'CONTACT', shared: 'contact' },
-      { ico: '🤖', lbl: 'FAQ',     shared: 'faq' },
+      { ico: '🤖', lbl: 'SIGIL',   shared: 'faq' },
     ],
   };
 
@@ -625,6 +634,7 @@ const OS = (() => {
         if (item.shared) openShared(item.shared);
         else if (item.win) openDesktopWin(item.win);
         else if (item.proj) Projects.open(item.proj);
+        else if (item.link) window.location.href = item.link;
       });
       grid.appendChild(btn);
     });

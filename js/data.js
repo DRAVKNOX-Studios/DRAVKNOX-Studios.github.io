@@ -43,11 +43,6 @@ const PROJECTS = {
     // TODO: yes. it exists. stop asking.
   }, */
 
-  embrvaal_games_placeholder: {
-    name: 'EMBRVAAL GAMES', ico: '🎮', brand: 'vl',
-    ...STANDBY
-  },
-
   /* EMBRVAAL 3D ART -- renders. blender. things that make people say "wait how" */
 
   /* renders: {
@@ -70,6 +65,21 @@ const PROJECTS = {
   embrvaal_content_placeholder: {
     name: 'EMBRVAAL CONTENT', ico: '🎬', brand: 'vl',
     ...STANDBY
+  },
+
+  floppy_bird: {
+    name: 'FLOPPY BIRD',
+    ico: '🐦',
+    brand: 'vl',
+    blurb: 'A cursed little flight toward impossible food. Find it. Play it.',
+    tags: ['EMBRVAAL', 'MICRO GAME', 'FIND & PLAY'],
+    req: [],
+    install: [],
+    devlog: [],
+    dl: false,
+    dlLabel: null,
+    age: 'E',
+    teaserOnly: true
   },
 
   /* VELTRUN MUSIC -- the music division. rock. nu metal. synthwave. too loud. perfect. */
@@ -192,8 +202,12 @@ const FAQ_KB = [
     answer: "There are two versions of the site. The professional site is the clean one with the nice fonts. The OS site is Payne-less UI: Great Grand-daddy, the cyberpunk desktop experience. You can switch between them using the button in the footer of the pro site, or the DRAVKNOX card on the OS boot screen."
   },
   {
+    keys: ['floppy','bird','404','ragebait','hidden game','find it play it'],
+    answer: "Floppy Bird is live under Embrvaal. It is intentionally discoverable. Find it. Play it."
+  },
+  {
     keys: ['hello','hi','hey','yo','sup','howdy','greetings','hiya'],
-    answer: "Hey. DK_ASSIST online. The studio is just getting started. Ask me anything about the divisions, the mission, or what's coming."
+    answer: "Hey. SIGIL online. The studio is just getting started. Ask me anything about the divisions, the mission, or what's coming."
   },
   {
     keys: ['thank','thanks','cheers','appreciate','helpful','great','nice','cool','awesome','perfect'],

@@ -9,6 +9,19 @@ const Projects = (() => {
      most of them are placeholder content right now. the structure is real though. */
 
   function buildOverview(p) {
+    if (p.teaserOnly) {
+      return `
+        <div class="det-hero">
+          <div style="font-size:30px;margin-bottom:8px;">${p.ico}</div>
+          <div class="det-title">${p.name}</div>
+          <div class="det-blurb">${p.blurb}</div>
+          <div class="det-meta">
+            ${(p.tags || []).map(t => `<span class="det-badge">${t}</span>`).join('')}
+            <span class="det-badge det-age">AGE ${p.age}</span>
+          </div>
+          <div class="det-placeholder" style="margin-top:12px;">Find it. Play it.</div>
+        </div>`;
+    }
     const dlHtml = p.dl
       ? `<button class="dl-btn" onclick="window.open('#','_blank')">${p.dlLabel || '⬇ DOWNLOAD'}</button>`
       : `<span class="det-badge det-unavail">NOT YET AVAILABLE</span>`;
@@ -341,14 +354,19 @@ const Projects = (() => {
     tabsEl.innerHTML = '';
     panelsEl.innerHTML = '';
 
-    const tabDefs = [
-      { id: 'overview',    label: 'OVERVIEW',    html: buildOverview(p) },
-      { id: 'screenshots', label: 'SCREENSHOTS', html: buildScreenshots(p) },
-      { id: 'videos',      label: 'VIDEOS',      html: buildVideos(p) },
-      { id: 'devlog',      label: 'DEVLOG',      html: buildDevlog(p) },
-      { id: 'install',     label: 'INSTALL',     html: buildInstall(p) },
-      { id: 'sysreq',      label: 'SYS REQ',     html: buildSysReq(p) },
-    ];
+    const tabDefs = p.teaserOnly
+      ? [
+          { id: 'overview', label: 'OVERVIEW', html: buildOverview(p) },
+          { id: 'notes', label: 'NOTES', html: `<div class="det-section-label">◈ PROJECT NOTES</div><div class="det-placeholder">No direct launch path from this listing.<br>Find it. Play it.</div>` },
+        ]
+      : [
+          { id: 'overview',    label: 'OVERVIEW',    html: buildOverview(p) },
+          { id: 'screenshots', label: 'SCREENSHOTS', html: buildScreenshots(p) },
+          { id: 'videos',      label: 'VIDEOS',      html: buildVideos(p) },
+          { id: 'devlog',      label: 'DEVLOG',      html: buildDevlog(p) },
+          { id: 'install',     label: 'INSTALL',     html: buildInstall(p) },
+          { id: 'sysreq',      label: 'SYS REQ',     html: buildSysReq(p) },
+        ];
 
     tabDefs.forEach((td, i) => {
       const tab = document.createElement('div');

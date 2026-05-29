@@ -1,4 +1,4 @@
-// faq.js -- simulated chatbot FAQ for DK_ASSIST
+// faq.js -- simulated chatbot FAQ for SIGIL
 // it's not AI. it's vibes-driven keyword matching. and it works fine. don't @ me.
 
 const FAQ = (() => {
@@ -21,7 +21,7 @@ const FAQ = (() => {
 
       const meta = document.createElement('div');
       meta.className = 'fmsg-meta';
-      meta.textContent = who === 'bot' ? 'DK_ASSIST · ' + ts() : 'YOU · ' + ts();
+      meta.textContent = who === 'bot' ? 'SIGIL · ' + ts() : 'YOU · ' + ts();
 
       const bub = document.createElement('div');
       bub.className = 'fbubble';
@@ -43,7 +43,7 @@ const FAQ = (() => {
     el.id = 'faq-typing';
     const meta = document.createElement('div');
     meta.className = 'fmsg-meta';
-    meta.textContent = 'DK_ASSIST · ' + ts();
+    meta.textContent = 'SIGIL · ' + ts();
     const bub = document.createElement('div');
     bub.className = 'fbubble';
     bub.innerHTML = '<div class="ftyping"><div class="ftd"></div><div class="ftd"></div><div class="ftd"></div></div>';
@@ -173,7 +173,7 @@ const FAQ = (() => {
     booted = true;
 
     await new Promise(r => setTimeout(r, 350));
-    await addMsg('DK_ASSIST v1.0 online. All knowledge banks loaded.', 'bot');
+    await addMsg('SIGIL v1.0 online. All knowledge banks loaded.', 'bot');
     await new Promise(r => setTimeout(r, 500));
     await addMsg('Ask me anything about Dravknox Studios, the three divisions, projects, downloads, or licensing.', 'bot');
     buildSuggestions();
