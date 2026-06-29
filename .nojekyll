@@ -1,0 +1,2 @@
+# This file disables Jekyll processing on GitHub Pages
+# Allowing dot-folders like .well-known to be served as-is
