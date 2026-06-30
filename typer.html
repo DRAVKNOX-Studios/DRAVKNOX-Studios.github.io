@@ -97,6 +97,84 @@
 <link rel="stylesheet" href="css/typer/gallery-downloads.css">
 <link rel="stylesheet" href="css/lightbox/lightbox-base.css">
 <link rel="stylesheet" href="css/lightbox/lightbox-ui.css">
+
+<style>
+/* ── Privacy Policy section ── */
+.privacy-section {
+  padding: 72px clamp(1.5rem, 6vw, 8rem);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.privacy-section .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent, #ff5c5c);
+  margin-bottom: 0.75rem;
+}
+
+.privacy-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.privacy-section .section-sub {
+  color: var(--text-muted, #999);
+  font-size: 0.9375rem;
+  margin-bottom: 2.5rem;
+  max-width: 60ch;
+}
+
+.privacy-card {
+  background: var(--surface, #1a1a1a);
+  border: 1px solid rgba(255, 92, 92, 0.18);
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.privacy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text, #e8e8e4);
+}
+
+.privacy-item-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  color: var(--accent, #ff5c5c);
+}
+
+.privacy-item + .privacy-item {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.privacy-note {
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted, #777);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 600px) {
+  .privacy-card {
+    padding: 1.25rem 1.25rem;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -135,6 +213,7 @@
         <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#downloads">Downloads</a></li>
         <li><a href="#code">Code</a></li>
+        <li><a href="#privacypolicy">Privacy</a></li>
       </ul>
     </nav>
   </div>
@@ -231,9 +310,47 @@
   <div class="link-grid" id="codeGrid"></div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════
+     PRIVACY POLICY
+════════════════════════════════════════════════════ -->
+<section id="privacypolicy" aria-labelledby="privacy-heading">
+  <div class="privacy-section">
+    <div class="eyebrow">No data, no games</div>
+    <h2 id="privacy-heading">Privacy Policy</h2>
+    <p class="section-sub">Typer is a fully offline, fully private keyboard. Here's exactly what that means.</p>
+
+    <div class="privacy-card" role="list">
+
+      <div class="privacy-item" role="listitem">
+        <svg class="privacy-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span>Typer does not collect, store, transmit, or share personal data.</span>
+      </div>
+
+      <div class="privacy-item" role="listitem">
+        <svg class="privacy-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        </svg>
+        <span>All typing, predictions, settings, and user data remain on the device.</span>
+      </div>
+
+      <div class="privacy-item" role="listitem">
+        <svg class="privacy-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M10.71 18.95a4 4 0 0 0 5.66 0"/><path d="M12 20h.01"/>
+        </svg>
+        <span>Typer does not require internet access and cannot communicate with external servers.</span>
+      </div>
+
+    </div>
+
+    <p class="privacy-note">Last updated: June 2026 · Maintained by DRAVKNOX Studios · MIT Licensed</p>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-brand">Payne-less: Typer</div>
-  <div>MIT licensed, branding stays with DRAVKNOX Studios. Have a painless typing journey ahead.</div>
+  <div>Have a painless typing journey ahead.</div>
 </footer>
 
 <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" tabindex="-1">
