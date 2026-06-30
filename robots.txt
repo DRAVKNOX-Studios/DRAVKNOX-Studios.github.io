@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
-Disallow: /assets/favicon/
 
-Sitemap: https://dravknox.github.io/sitemap.xml
+# Disallow non-content directories
+Disallow: /assets/favicon/
+Disallow: /css/
+Disallow: /js/
+Disallow: /data/
+Disallow: /.well-known/
+
+# Disallow Google Search Console verification page
+Disallow: /googlea81f0a7a93ceb19c.html
+
+Sitemap: https://dravknox-studios.github.io/sitemap.xml
