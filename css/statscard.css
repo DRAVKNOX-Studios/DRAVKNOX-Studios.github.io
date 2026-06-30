@@ -1,0 +1,285 @@
+/* ============================================================
+   statscard.css — Stats card that expands from the Stats button
+   The aside grows rightward on hover; the card slides in.
+   Completely separate from all other CSS.
+   ============================================================ */
+
+/* ── Sidebar left: allow card to overflow rightward ─────────── */
+#sidebar-left {
+  /* Keep centering from layout.css — only add overflow so the card
+     can visually extend beyond the sidebar column width */
+  overflow: visible;
+  padding-left: 16px;
+}
+
+/* ── Stats trigger wrapper ──────────────────────────────────── */
+#stats-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── The expanding card ─────────────────────────────────────── */
+#stats-card {
+  position: absolute;
+  left: calc(100% + 10px); /* sits just right of the button */
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 240px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  pointer-events: none;
+
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateX(-8px) scale(0.97);
+  transform-origin: left center;
+  transition:
+    opacity    200ms var(--ease-out),
+    transform  200ms var(--ease-out),
+    visibility 0s    linear 200ms;
+
+  box-shadow:
+    4px 0 24px rgba(0,0,0,0.4),
+    0 0 0 1px var(--border-subtle),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  z-index: 50;
+}
+
+[data-theme="light"] #stats-card {
+  box-shadow:
+    4px 0 16px rgba(0,0,0,0.10),
+    0 0 0 1px var(--border-card);
+}
+
+/* Open state — triggered by hover on #stats-trigger OR focus-within */
+#stats-trigger:hover #stats-card,
+#stats-trigger:focus-within #stats-card,
+#stats-trigger.is-open #stats-card {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition:
+    opacity    200ms var(--ease-out),
+    transform  200ms var(--ease-out),
+    visibility 0s    linear 0s;
+}
+
+/* Also light up the button while card is showing */
+#stats-trigger:hover   #btn-stats,
+#stats-trigger:focus-within #btn-stats,
+#stats-trigger.is-open #btn-stats {
+  background: var(--bg-card-hover);
+  border-color: var(--border-focus);
+  box-shadow: var(--glow-red);
+}
+
+/* No animation when motion off */
+body[data-motion="off"] #stats-card {
+  transition: opacity 80ms linear, visibility 0s linear 80ms;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* ── Card header ────────────────────────────────────────────── */
+.sc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sc-title {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.sc-updated {
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── Stat rows ──────────────────────────────────────────────── */
+.sc-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.sc-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sc-stat-label {
+  font-size: 0.6rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sc-stat-value {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  text-align: right;
+}
+
+.sc-stat-value.accent { color: var(--brand-red-bright); }
+
+/* ── Divider ────────────────────────────────────────────────── */
+.sc-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 12px 0;
+}
+
+/* ── Language bars ──────────────────────────────────────────── */
+.sc-lang-title {
+  font-size: 0.55rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.sc-langs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sc-lang {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sc-lang-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sc-lang-name {
+  font-size: 0.6rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.sc-lang-pct {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sc-lang-bar-bg {
+  height: 3px;
+  background: var(--bg-surface);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sc-lang-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 600ms var(--ease-out);
+}
+
+/* Bar colours per language — extend as needed */
+.sc-lang-bar-fill[data-lang="Rust"]       { background: #CE422B; }
+.sc-lang-bar-fill[data-lang="TypeScript"] { background: #3178C6; }
+.sc-lang-bar-fill[data-lang="JavaScript"] { background: #F7DF1E; }
+.sc-lang-bar-fill[data-lang="C++"]        { background: #00599C; }
+.sc-lang-bar-fill[data-lang="C#"]         { background: #9B4F96; }
+.sc-lang-bar-fill[data-lang="Python"]     { background: #3572A5; }
+.sc-lang-bar-fill[data-lang="HLSL"]       { background: #aaaacc; }
+.sc-lang-bar-fill[data-lang="CSS"]        { background: #563d7c; }
+.sc-lang-bar-fill[data-lang="HTML"]       { background: #E34C26; }
+.sc-lang-bar-fill[data-lang="Shell"]      { background: #89e051; }
+/* Fallback for unlisted languages */
+.sc-lang-bar-fill                          { background: var(--text-muted); }
+
+/* ── Platforms ──────────────────────────────────────────────── */
+.sc-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.sc-platform-tag {
+  font-size: 0.5rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+/* ── Left accent line on card ───────────────────────────────── */
+#stats-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--brand-red) 40%, var(--brand-red) 60%, transparent);
+  border-radius: 1px;
+}
+
+@media (max-width: 700px) {
+  #sidebar-left {
+    overflow: visible;
+    padding-left: var(--space-md);
+  }
+
+  #stats-trigger {
+    position: static;
+  }
+
+  #stats-card {
+    position: fixed;
+    left: var(--space-md);
+    right: var(--space-md);
+    top: 118px;
+    width: auto;
+    max-width: 360px;
+    max-height: calc(100dvh - 134px);
+    overflow-y: auto;
+    transform: translateY(-8px) scale(0.98);
+    transform-origin: top left;
+    z-index: 1000;
+  }
+
+  #stats-trigger:hover #stats-card,
+  #stats-trigger:focus-within #stats-card,
+  #stats-trigger.is-open #stats-card {
+    transform: translateY(0) scale(1);
+  }
+}

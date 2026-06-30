@@ -1,0 +1,252 @@
+/* ============================================================
+   dropup.css — Contact platform drop-up
+   Anchored above #ctrl-contact. Separate from all other CSS.
+   ============================================================ */
+
+/* ── Anchor wrapper ─────────────────────────────────────────── */
+/* Wraps the contact button + drop-up. Sits as a flex item inside #controls. */
+#contact-anchor {
+  position: relative;
+  display: flex;          /* participates in #controls flex row */
+  align-items: stretch;
+}
+
+/* ── Drop-up container ──────────────────────────────────────── */
+#contact-dropup {
+  position: absolute;
+  bottom: calc(100% + 10px); /* sit above the contact button */
+  right: 0;
+  z-index: 200;
+
+  min-width: 220px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  /* Closed state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.97);
+  transform-origin: bottom right;
+  transition:
+    opacity    var(--dur-mid) var(--ease-out),
+    transform  var(--dur-mid) var(--ease-out),
+    visibility 0s linear var(--dur-mid);
+
+  box-shadow:
+    0 -8px 32px rgba(0,0,0,0.45),
+    0 0 0 1px var(--border-subtle),
+    inset 0 -1px 0 rgba(255,255,255,0.03);
+}
+
+[data-theme="light"] #contact-dropup {
+  box-shadow:
+    0 -6px 20px rgba(0,0,0,0.12),
+    0 0 0 1px var(--border-card);
+}
+
+/* Open state */
+#contact-dropup.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity    var(--dur-mid) var(--ease-out),
+    transform  var(--dur-mid) var(--ease-out),
+    visibility 0s linear 0s;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.dropup-header {
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.55rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── List ───────────────────────────────────────────────────── */
+.dropup-list {
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Item ───────────────────────────────────────────────────── */
+.dropup-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition:
+    background var(--dur-fast),
+    color      var(--dur-fast);
+  font-size: 0.78rem;
+  font-weight: var(--weight-regular);
+  /* For display-only items (no href) */
+  outline: none;
+}
+
+.dropup-item:is(a):hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+/* Display-only item — muted, no hover */
+.dropup-item.is-display-only {
+  cursor: default;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* ── Platform icon ──────────────────────────────────────────── */
+.dropup-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity var(--dur-fast);
+}
+
+.dropup-item:is(a):hover .dropup-icon {
+  opacity: 1;
+}
+
+/* Simple Icons SVGs are filled, not stroked — inherit currentColor */
+.dropup-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Fallback letter when icon can't be fetched */
+.dropup-icon-fallback {
+  width: 16px;
+  height: 16px;
+  font-size: 0.65rem;
+  font-weight: var(--weight-bold);
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Username / label ───────────────────────────────────────── */
+.dropup-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.dropup-platform {
+  font-size: 0.65rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+.dropup-username {
+  font-size: 0.72rem;
+  font-weight: var(--weight-regular);
+  color: var(--text-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropup-item.is-display-only .dropup-username {
+  color: var(--text-muted);
+}
+
+/* Display-only badge */
+.dropup-badge {
+  margin-left: auto;
+  font-size: 0.48rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 1px 4px;
+  flex-shrink: 0;
+}
+
+/* ── Active state on the trigger button when open ───────────── */
+#ctrl-contact[aria-expanded="true"] {
+  background: rgba(192, 40, 26, 0.1);
+  color: var(--brand-red-bright);
+}
+#ctrl-contact[aria-expanded="true"] span {
+  color: var(--brand-red);
+}
+
+/* ── Stagger animation on items ─────────────────────────────── */
+.dropup-list .dropup-item {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity    var(--dur-mid) var(--ease-out),
+    transform  var(--dur-mid) var(--ease-out),
+    background var(--dur-fast),
+    color      var(--dur-fast);
+}
+
+#contact-dropup.is-open .dropup-list .dropup-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Each item staggers in from bottom */
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(1) { transition-delay: 30ms;  }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(2) { transition-delay: 60ms;  }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(3) { transition-delay: 90ms;  }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(4) { transition-delay: 120ms; }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(5) { transition-delay: 150ms; }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(6) { transition-delay: 180ms; }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(7) { transition-delay: 210ms; }
+#contact-dropup.is-open .dropup-list .dropup-item:nth-child(8) { transition-delay: 240ms; }
+
+body[data-motion="off"] .dropup-list .dropup-item {
+  transition: background var(--dur-fast), color var(--dur-fast);
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 520px) {
+  #contact-dropup {
+    position: fixed;
+    left: var(--space-md);
+    right: var(--space-md);
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    z-index: 1000;
+    min-width: 0;
+    max-height: calc(100dvh - 120px);
+    overflow-y: auto;
+    transform-origin: bottom center;
+  }
+
+  .dropup-username {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

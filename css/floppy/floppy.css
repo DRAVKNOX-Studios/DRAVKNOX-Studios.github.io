@@ -1,0 +1,44 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#0a0a14;font-family:'Segoe UI',system-ui,sans-serif}
+
+.sky{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 50% 30%,#171034 0%,#0a0a14 70%)}
+.stars{position:absolute;inset:0;
+  background-image:radial-gradient(2px 2px at 20% 30%,#fff8,transparent),
+    radial-gradient(2px 2px at 70% 60%,#fff6,transparent),
+    radial-gradient(1px 1px at 40% 80%,#fff5,transparent),
+    radial-gradient(1px 1px at 85% 20%,#fff7,transparent),
+    radial-gradient(1px 1px at 60% 40%,#fff4,transparent);
+  opacity:.6}
+.glow{position:absolute;left:50%;top:55%;width:60vw;height:60vw;max-width:600px;max-height:600px;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(238,90,36,.18) 0%,transparent 70%);filter:blur(10px)}
+
+.wrap{position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:20px}
+
+.code{font-size:clamp(13px,2vw,16px);letter-spacing:10px;color:rgba(255,190,70,.5);margin-bottom:4px}
+
+.bird{font-size:clamp(48px,10vw,80px);margin:6px 0 10px;
+  animation:flap 1.4s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(238,90,36,.4))}
+@keyframes flap{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+
+.title{font-size:clamp(26px,5vw,46px);font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(135deg,#ff9f43,#ee5a24,#fd79a8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+
+.line{font-size:clamp(12px,1.8vw,15px);color:rgba(255,255,255,.45);font-style:italic;margin-bottom:26px}
+
+.os-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+.os-pill{padding:6px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.04);color:rgba(255,255,255,.55);font-size:clamp(10px,1.4vw,12px);
+  font-weight:700;letter-spacing:.5px}
+
+.hint{font-size:clamp(10px,1.4vw,12px);color:rgba(255,255,255,.25);max-width:340px;line-height:1.7;margin-bottom:24px}
+
+.home-btn{display:inline-block;padding:12px 32px;border-radius:999px;text-decoration:none;
+  font-size:clamp(13px,1.8vw,15px);font-weight:800;letter-spacing:.5px;color:#fff;
+  background:linear-gradient(135deg,#ff9f43,#ee5a24);
+  box-shadow:0 8px 30px rgba(238,90,36,.45),0 2px 0 rgba(255,255,255,.15) inset;
+  transition:transform .14s,box-shadow .14s}
+.home-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 36px rgba(238,90,36,.6)}
+.home-btn:active{transform:scale(.97)}

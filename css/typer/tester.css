@@ -1,0 +1,131 @@
+/* Interactive keyboard tester — the signature piece */
+
+.tester-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.tester-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 30px 80px -30px rgba(255, 92, 92, 0.18);
+}
+
+.tester-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.tester-bar h3 {
+  font-size: 17px;
+  font-family: var(--font-display);
+}
+
+.tester-wpm {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.tester-screen {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  min-height: 110px;
+  padding: 16px 18px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 14px;
+  word-break: break-word;
+}
+
+.tester-screen .placeholder {
+  color: var(--text-faint);
+}
+
+.tester-clear {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.tester-clear:hover {
+  border-color: var(--accent);
+}
+
+.tester-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tester-row {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tester-key {
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 12px 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.08s ease, transform 0.08s ease;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tester-key:active,
+.tester-key.pressed {
+  background: var(--accent);
+  color: #0a0a0a;
+  transform: scale(0.95);
+}
+
+.tester-key.wide {
+  flex: 5;
+}
+
+.tester-key.func {
+  flex: 1.4;
+  color: var(--text-dim);
+}
+
+.tester-key.enter {
+  background: var(--accent);
+  color: #0a0a0a;
+  flex: 1.4;
+}
+
+.tester-key.enter:active {
+  background: var(--accent-bright);
+}
+
+@media (max-width: 480px) {
+  .tester-key {
+    font-size: 11px;
+    padding: 10px 0;
+  }
+}

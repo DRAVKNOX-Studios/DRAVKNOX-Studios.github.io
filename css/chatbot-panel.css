@@ -1,0 +1,274 @@
+/* ============================================================
+   chatbot-panel.css — Panel shell, topbar, open/close
+   transitions, send button, input field, and active state
+   on the ctrl button.
+   Split from chatbot.css
+   ============================================================ */
+
+#chat-anchor {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+#chatbot-panel {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  right: 0;
+  z-index: 210;
+  width: min(340px, calc(100vw - 28px));
+  height: min(500px, calc(100dvh - 118px));
+  min-height: 350px;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.97);
+  transform-origin: bottom right;
+  transition:
+    opacity var(--dur-mid) var(--ease-out),
+    transform var(--dur-mid) var(--ease-out),
+    visibility 0s linear var(--dur-mid);
+  box-shadow:
+    0 -8px 32px rgba(0,0,0,0.45),
+    0 0 0 1px var(--border-subtle),
+    inset 0 -1px 0 rgba(255,255,255,0.03);
+}
+
+[data-theme="light"] #chatbot-panel {
+  box-shadow:
+    0 -6px 20px rgba(0,0,0,0.14),
+    0 0 0 1px var(--border-card);
+}
+
+#chatbot-panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity var(--dur-mid) var(--ease-out),
+    transform var(--dur-mid) var(--ease-out),
+    visibility 0s linear 0s;
+}
+
+/* ── Topbar ─────────────────────────────────────────────────── */
+.chatbot-topbar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+.chatbot-title {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.chatbot-close {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--icon-primary);
+  cursor: pointer;
+  transition:
+    background var(--dur-fast),
+    color var(--dur-fast);
+}
+
+.chatbot-close:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.chatbot-close svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+/* ── Avatars ────────────────────────────────────────────────── */
+.chatbot-avatar {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bot-avatar {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(224,53,32,0.26), transparent 48%),
+    var(--bg-surface);
+  box-shadow:
+    inset 0 0 0 1px var(--border-card),
+    var(--glow-red);
+}
+
+.user-avatar {
+  position: relative;
+  background: var(--icon-muted);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.16);
+}
+
+.user-avatar::before,
+.user-avatar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+}
+
+.user-avatar::before {
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.user-avatar::after {
+  bottom: 5px;
+  width: 17px;
+  height: 10px;
+  border-radius: 10px 10px 5px 5px;
+}
+
+/* ── Input form ─────────────────────────────────────────────── */
+.chatbot-form {
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+#chatbot-input {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  padding: 0 10px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  outline: none;
+  transition:
+    border-color var(--dur-fast),
+    box-shadow var(--dur-fast);
+}
+
+#chatbot-input::placeholder {
+  color: var(--text-muted);
+}
+
+#chatbot-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px rgba(192, 40, 26, 0.12);
+}
+
+.chatbot-send {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-red-bright);
+  background: rgba(192, 40, 26, 0.12);
+  cursor: pointer;
+  transition:
+    background var(--dur-fast),
+    transform var(--dur-fast);
+}
+
+.chatbot-send:hover {
+  background: rgba(192, 40, 26, 0.2);
+  transform: translateY(-1px);
+}
+
+.chatbot-send svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ── Ctrl button active state ───────────────────────────────── */
+#ctrl-chatbot[aria-expanded="true"] {
+  background: rgba(192, 40, 26, 0.1);
+  color: var(--brand-red-bright);
+}
+
+#ctrl-chatbot[aria-expanded="true"] span {
+  color: var(--brand-red);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 520px) {
+  #chatbot-panel {
+    position: fixed;
+    left: max(10px, env(safe-area-inset-left));
+    right: max(10px, env(safe-area-inset-right));
+    bottom: calc(68px + env(safe-area-inset-bottom));
+    z-index: 1000;
+    width: auto;
+    max-width: 480px;
+    margin-inline: auto;
+    height: min(620px, calc(100dvh - 88px));
+    min-height: 0;
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    transform: translateY(8px) scale(0.97);
+    transform-origin: bottom center;
+  }
+
+  #chatbot-panel.is-open {
+    transform: translateY(0) scale(1);
+  }
+
+  .chatbot-form {
+    grid-template-columns: minmax(0, 1fr) 34px;
+    gap: 7px;
+    padding: 8px;
+  }
+
+  #chatbot-input,
+  .chatbot-send {
+    height: 34px;
+  }
+
+  .chatbot-send {
+    width: 34px;
+  }
+}
+
+body[data-motion="off"] #chatbot-panel,
+body[data-motion="off"] .chatbot-close,
+body[data-motion="off"] #chatbot-input,
+body[data-motion="off"] .chatbot-send {
+  transition: none;
+}

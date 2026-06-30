@@ -1,0 +1,301 @@
+/* lightbox-ui.css — header, zoom bar, stage, strip, nav arrows */
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.lightbox-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.lightbox-counter {
+  font-size: 0.58rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lightbox-caption {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lightbox-close {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--icon-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background   var(--dur-fast),
+    color        var(--dur-fast),
+    border-color var(--dur-fast);
+}
+
+.lightbox-close:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  border-color: var(--border-card);
+}
+
+.lightbox-close svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2;
+}
+
+/* ── Zoom toolbar ────────────────────────────────────────── */
+
+.lightbox-zoom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  background: var(--bg-surface);
+}
+
+.lightbox-zoom-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--icon-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background   var(--dur-fast),
+    color        var(--dur-fast),
+    border-color var(--dur-fast);
+}
+
+.lightbox-zoom-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  border-color: var(--border-card);
+}
+
+.lightbox-zoom-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.lightbox-zoom-level {
+  font-size: 0.62rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  min-width: 38px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* ── Stage ───────────────────────────────────────────────── */
+
+.lightbox-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+.lightbox-img-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) transparent;
+}
+
+.lightbox-img-wrap::-webkit-scrollbar       { width: 4px; height: 4px; }
+.lightbox-img-wrap::-webkit-scrollbar-track { background: transparent; }
+.lightbox-img-wrap::-webkit-scrollbar-thumb {
+  background: var(--border-card);
+  border-radius: 2px;
+}
+
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transform-origin: center center;
+  transition:
+    opacity   200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox-img.is-loaded {
+  opacity: 1;
+}
+
+.lightbox-img.is-zoomed {
+  max-width: none;
+  max-height: none;
+  cursor: grab;
+}
+
+.lightbox-img.is-zoomed:active {
+  cursor: grabbing;
+}
+
+/* ── Nav arrows ──────────────────────────────────────────── */
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface);
+  color: var(--icon-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.65;
+  z-index: 2;
+  transition:
+    opacity      var(--dur-fast),
+    background   var(--dur-fast),
+    border-color var(--dur-fast);
+}
+
+.lightbox-nav:hover {
+  opacity: 1;
+  background: var(--bg-card-hover);
+  border-color: var(--border-focus);
+}
+
+.lightbox-nav.prev { left: 10px; }
+.lightbox-nav.next { right: 10px; }
+
+.lightbox-nav svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.lightbox-nav[hidden] { display: none; }
+
+/* ── Thumbnail strip ─────────────────────────────────────── */
+
+.lightbox-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) transparent;
+}
+
+.lightbox-strip::-webkit-scrollbar       { height: 3px; }
+.lightbox-strip::-webkit-scrollbar-track { background: transparent; }
+.lightbox-strip::-webkit-scrollbar-thumb {
+  background: var(--border-card);
+  border-radius: 2px;
+}
+
+.lightbox-thumb {
+  width: 50px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.4;
+  transition:
+    opacity      var(--dur-fast),
+    border-color var(--dur-fast),
+    transform    var(--dur-fast);
+}
+
+.lightbox-thumb:hover  { opacity: 0.75; }
+
+.lightbox-thumb.is-active {
+  opacity: 1;
+  border-color: var(--brand-red);
+  transform: scale(1.08);
+}
+
+/* ── Mobile ──────────────────────────────────────────────── */
+
+@media (max-width: 520px) {
+  .lightbox-nav {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+  }
+
+  .lightbox-nav.prev { left: 6px; }
+  .lightbox-nav.next { right: 6px; }
+
+  .lightbox-thumb {
+    width: 42px;
+    height: 32px;
+  }
+
+  .lightbox-zoom-bar {
+    padding: 5px 12px;
+  }
+
+  .lightbox-header {
+    padding: 10px 12px 8px;
+  }
+}
+
+@media (hover: none) {
+  .lightbox-nav { opacity: 0.85; }
+}

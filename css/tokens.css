@@ -1,0 +1,120 @@
+/* ============================================================
+   tokens.css — Design tokens for Dravknox Studios
+   ============================================================ */
+
+:root {
+  /* --- Brand reds --- */
+  --brand-red:        #C0281A;
+  --brand-red-bright: #E03520;
+  --brand-red-glow:   #FF4433;
+  --brand-red-deep:   #7A1208;
+  --brand-red-dim:    rgba(192, 40, 26, 0.18);
+
+  /* --- Dark theme (default) --- */
+  --bg-base:          #080A0F;
+  --bg-surface:       #0D1018;
+  --bg-card:          #111520;
+  --bg-card-hover:    #181D2E;
+
+  --border-subtle:    rgba(192, 40, 26, 0.15);
+  --border-card:      rgba(192, 40, 26, 0.25);
+  --border-focus:     rgba(224, 53, 32, 0.55);
+
+  --text-primary:     #E4E6F0;
+  --text-secondary:   #7A7D95;
+  --text-muted:       #3E4058;
+  --text-accent:      var(--brand-red-bright);
+
+  --icon-primary:     #B0B3C8;
+  --icon-muted:       #4A4D65;
+
+  /* --- Division accents --- */
+  --accent-talvrek:   #7AACCC;
+  --accent-embrvaal:  #CC3A2A;
+  --accent-veltrun:   #4A8FCC;
+  --accent-vault:     #707285;
+
+  /* --- Glows --- */
+  --glow-red:    0 0 20px rgba(224, 53, 32, 0.4), 0 0 50px rgba(192, 40, 26, 0.15);
+  --glow-talvrek:  0 0 16px rgba(122, 172, 204, 0.3);
+  --glow-embrvaal: 0 0 16px rgba(204, 58, 42, 0.4);
+  --glow-veltrun:  0 0 16px rgba(74, 143, 204, 0.3);
+  --glow-vault:    0 0 16px rgba(112, 114, 133, 0.2);
+
+  /* --- Typography ---
+     Space Grotesk: geometric, sharp, modern — not fantasy
+     Inter: neutral, readable body
+     JetBrains Mono: code layer in bg  */
+  --font-display: 'Space Grotesk', 'DM Sans', sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type scale */
+  --size-hero:      clamp(2.8rem, 7vw, 6rem);
+  --size-suffix:    clamp(0.7rem, 1.3vw, 1rem);
+  --size-tagline:   clamp(0.6rem, 1vw, 0.75rem);
+  --size-division:  clamp(0.75rem, 1.2vw, 0.9rem);
+  --size-label:     0.6rem;
+
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+
+  --tracking-hero:  -0.02em;
+  --tracking-label: 0.2em;
+  --tracking-sub:   0.12em;
+
+  /* --- Spacing --- */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  14px;
+  --space-lg:  22px;
+  --space-xl:  36px;
+  --space-2xl: 56px;
+
+  /* --- Radius --- */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-mid:  260ms;
+  --dur-slow: 440ms;
+
+  /* --- Z layers --- */
+  --z-bg:       0;
+  --z-content:  10;
+  --z-sidebar:  20;
+  --z-controls: 30;
+}
+
+/* ============================================================
+   Light theme
+   ============================================================ */
+[data-theme="light"] {
+  --bg-base:       #EDEEF5;
+  --bg-surface:    #E4E5F0;
+  --bg-card:       #D8DAE8;
+  --bg-card-hover: #CDD0DF;
+
+  --border-subtle: rgba(192, 40, 26, 0.14);
+  --border-card:   rgba(192, 40, 26, 0.24);
+
+  --text-primary:   #141520;
+  --text-secondary: #484A60;
+  --text-muted:     #8A8CA8;
+
+  --icon-primary:  #282A3C;
+  --icon-muted:    #8A8CA8;
+
+  --glow-red:      0 0 12px rgba(192, 40, 26, 0.2);
+  --glow-talvrek:  0 0 10px rgba(80, 130, 160, 0.2);
+  --glow-embrvaal: 0 0 10px rgba(192, 40, 26, 0.2);
+  --glow-veltrun:  0 0 10px rgba(50, 110, 170, 0.2);
+  --glow-vault:    0 0 10px rgba(90, 92, 110, 0.15);
+}

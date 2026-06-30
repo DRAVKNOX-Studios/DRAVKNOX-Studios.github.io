@@ -1,0 +1,138 @@
+/* ============================================================
+   controls.css — Sidebar buttons + controls dock
+   Split from components.css
+   ============================================================ */
+
+/* ── Sidebar buttons ────────────────────────────────────────── */
+.sidebar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-sm);
+  cursor: pointer;
+  color: var(--icon-primary);
+  text-decoration: none;
+  transition:
+    background    var(--dur-mid) var(--ease-out),
+    border-color  var(--dur-mid) var(--ease-out),
+    box-shadow    var(--dur-mid) var(--ease-out);
+  min-width: 58px;
+}
+
+.sidebar-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-focus);
+  box-shadow: var(--glow-red);
+}
+
+.sidebar-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-btn span {
+  font-size: 0.55rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--dur-fast);
+}
+
+.sidebar-btn:hover span { color: var(--text-secondary); }
+
+/* ── Controls dock ──────────────────────────────────────────── */
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 6px;
+  pointer-events: all;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    background   var(--dur-slow) var(--ease-out),
+    border-color var(--dur-slow) var(--ease-out);
+}
+
+.ctrl-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--icon-primary);
+  transition:
+    background var(--dur-fast),
+    color      var(--dur-fast);
+  min-width: 48px;
+}
+
+.ctrl-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.ctrl-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+
+.ctrl-btn span {
+  font-size: 0.5rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.ctrl-btn:hover span { color: var(--text-secondary); }
+
+.ctrl-btn[aria-pressed="true"] {
+  background: rgba(192, 40, 26, 0.12);
+  color: var(--brand-red-bright);
+}
+.ctrl-btn[aria-pressed="true"] span { color: var(--brand-red); }
+
+@media (max-width: 700px) {
+  #controls {
+    max-width: calc(100vw - 2 * var(--space-md));
+    overflow: visible;
+  }
+
+  .ctrl-btn {
+    padding: 7px 9px;
+    min-width: 54px;
+  }
+
+  .ctrl-btn span,
+  .sidebar-btn span {
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 360px) {
+  .ctrl-btn {
+    min-width: 46px;
+    padding-inline: 7px;
+  }
+
+  .ctrl-btn span {
+    font-size: 0.46rem;
+    letter-spacing: 0.08em;
+  }
+}

@@ -1,0 +1,53 @@
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 22px;
+  max-width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.025);
+  color: var(--text-secondary);
+  font-size: 0.56rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-status svg {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+}
+
+.project-status-active-dev {
+  color: var(--accent-talvrek);
+  border-color: rgba(122, 172, 204, 0.28);
+  background: rgba(122, 172, 204, 0.08);
+}
+
+.project-status-released {
+  color: #86C88A;
+  border-color: rgba(134, 200, 138, 0.28);
+  background: rgba(134, 200, 138, 0.08);
+}
+
+.project-status-cancelled {
+  color: var(--accent-embrvaal);
+  border-color: rgba(204, 58, 42, 0.3);
+  background: rgba(204, 58, 42, 0.08);
+}
+
+.project-status-archived {
+  color: var(--accent-vault);
+  border-color: rgba(112, 114, 133, 0.3);
+  background: rgba(112, 114, 133, 0.1);
+}
+
+[data-theme="light"] .project-status {
+  background: rgba(20,21,32,0.035);
+}

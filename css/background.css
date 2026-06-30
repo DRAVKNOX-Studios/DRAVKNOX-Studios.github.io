@@ -1,0 +1,27 @@
+/* ============================================================
+   background.css — Canvas layer
+   ============================================================ */
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-bg);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Dark theme: full opacity, drawn in dim colour tones */
+  opacity: 1;
+  transition: opacity var(--dur-slow) var(--ease-out);
+}
+
+/* Light theme: canvas draws in darker inks (handled in JS),
+   no blend-mode trick needed — JS checks the theme and picks
+   appropriate stroke colours directly. */
+[data-theme="light"] #bg-canvas {
+  opacity: 1;
+}
+
+/* Motion off: freeze canvas (JS stops the loop) */
+body[data-motion="off"] #bg-canvas {
+  opacity: 0.25;
+}

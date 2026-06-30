@@ -1,0 +1,167 @@
+/* ============================================================
+   cards.css — Division cards, logo slots, sidebar buttons
+   Split from components.css
+   ============================================================ */
+
+/* ── Division cards ─────────────────────────────────────────── */
+/*
+  Cards are either <a> (The Vault → navigates) or <button>
+  (Talvrek/Embrvaal/Veltrun → Phase 2 panel). Reset button defaults.
+*/
+button.division-card {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.division-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  background: var(--bg-card);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background    var(--dur-mid) var(--ease-out),
+    box-shadow    var(--dur-mid) var(--ease-out);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Per-division radial glow on hover */
+.division-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease-out);
+  pointer-events: none;
+}
+
+.division-card[data-division="talvrek"]::before  { background: radial-gradient(ellipse at 50% 10%, rgba(122,172,204,0.1) 0%, transparent 65%); }
+.division-card[data-division="embrvaal"]::before { background: radial-gradient(ellipse at 50% 10%, rgba(204,58,42,0.12)  0%, transparent 65%); }
+.division-card[data-division="veltrun"]::before  { background: radial-gradient(ellipse at 50% 10%, rgba(74,143,204,0.10) 0%, transparent 65%); }
+.division-card[data-division="vault"]::before    { background: radial-gradient(ellipse at 50% 10%, rgba(112,114,133,0.1) 0%, transparent 65%); }
+
+.division-card:hover { background: var(--bg-card-hover); }
+.division-card:hover::before { opacity: 1; }
+
+/* ── Logo image slot ────────────────────────────────────────── */
+.division-logo-slot {
+  width: clamp(52px, 8vw, 72px);
+  height: clamp(52px, 8vw, 72px);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--dur-mid) var(--ease-out),
+              filter   var(--dur-mid) var(--ease-out);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-card);
+  position: relative;
+}
+
+.division-logo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  color: transparent;
+}
+
+.division-logo-slot:has(img) {
+  background: transparent;
+  border: none;
+}
+
+.division-logo-slot.icon-slot {
+  background: transparent;
+  border: none;
+}
+
+.division-card:hover .division-logo-slot {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.division-card[data-division="talvrek"]:hover  .division-logo-slot { filter: drop-shadow(var(--glow-talvrek)); }
+.division-card[data-division="embrvaal"]:hover .division-logo-slot { filter: drop-shadow(var(--glow-embrvaal)); }
+.division-card[data-division="veltrun"]:hover  .division-logo-slot { filter: drop-shadow(var(--glow-veltrun)); }
+.division-card[data-division="vault"]:hover    .division-logo-slot { filter: drop-shadow(var(--glow-vault)); }
+
+/* ── Division text ──────────────────────────────────────────── */
+.division-name {
+  font-family: var(--font-display);
+  font-size: var(--size-division);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.division-label {
+  font-size: var(--size-label);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.division-sub {
+  font-size: var(--size-label);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.division-card[data-division="talvrek"]  .division-label { color: var(--accent-talvrek);  }
+.division-card[data-division="embrvaal"] .division-label { color: var(--accent-embrvaal); }
+.division-card[data-division="veltrun"]  .division-label { color: var(--accent-veltrun);  }
+.division-card[data-division="vault"]    .division-label { color: var(--accent-vault);     }
+
+/* ── Vault icon (inline SVG sizing) ────────────────────────── */
+.vault-icon svg {
+  width: clamp(44px, 7vw, 60px);
+  height: clamp(44px, 7vw, 60px);
+  color: var(--accent-vault);
+  transition: color var(--dur-mid);
+}
+
+.division-card[data-division="vault"]:hover .vault-icon svg {
+  color: #9A9CB0;
+}
+
+/* ── Theme icon swap ────────────────────────────────────────── */
+.icon-moon { display: block; }
+.icon-sun  { display: none;  }
+[data-theme="light"] .icon-moon { display: none;  }
+[data-theme="light"] .icon-sun  { display: block; }
+
+@media (max-width: 700px) {
+  .division-card {
+    gap: 6px;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .division-logo-slot {
+    width: clamp(46px, 16vw, 60px);
+    height: clamp(46px, 16vw, 60px);
+  }
+
+  .vault-icon svg {
+    width: clamp(40px, 14vw, 52px);
+    height: clamp(40px, 14vw, 52px);
+  }
+}
+
+@media (max-width: 360px) {
+  #divisions {
+    grid-template-columns: 1fr;
+  }
+}

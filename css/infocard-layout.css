@@ -1,0 +1,125 @@
+/* ============================================================
+   infocard-layout.css — Info card positioning, open/close
+   transitions, right accent line, and responsive overrides.
+   Split from infocard.css
+   ============================================================ */
+
+/* ── Sidebar right: allow overflow leftward ──────────────────── */
+#sidebar-right {
+  overflow: visible;
+  padding-right: 16px;
+}
+
+/* ── Info trigger wrapper ───────────────────────────────────── */
+#info-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* ── The expanding card ─────────────────────────────────────── */
+#info-card {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 260px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateX(8px) scale(0.97);
+  transform-origin: right center;
+  transition:
+    opacity    200ms var(--ease-out),
+    transform  200ms var(--ease-out),
+    visibility 0s    linear 200ms;
+
+  box-shadow:
+    -4px 0 24px rgba(0,0,0,0.4),
+    0 0 0 1px var(--border-subtle),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  z-index: 50;
+}
+
+[data-theme="light"] #info-card {
+  box-shadow:
+    -4px 0 16px rgba(0,0,0,0.10),
+    0 0 0 1px var(--border-card);
+}
+
+#info-trigger:hover #info-card,
+#info-trigger:focus-within #info-card,
+#info-trigger.is-open #info-card {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(-50%) translateX(0) scale(1);
+  transition:
+    opacity    200ms var(--ease-out),
+    transform  200ms var(--ease-out),
+    visibility 0s    linear 0s;
+}
+
+#info-trigger:hover   #btn-info,
+#info-trigger:focus-within #btn-info,
+#info-trigger.is-open #btn-info {
+  background: var(--bg-card-hover);
+  border-color: var(--border-focus);
+  box-shadow: var(--glow-red);
+}
+
+body[data-motion="off"] #info-card {
+  transition: opacity 80ms linear, visibility 0s linear 80ms;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* Right accent line */
+#info-card::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--brand-red) 40%, var(--brand-red) 60%, transparent);
+  border-radius: 1px;
+}
+
+@media (max-width: 700px) {
+  #sidebar-right {
+    overflow: visible;
+    padding-right: var(--space-md);
+  }
+
+  #info-trigger {
+    position: static;
+  }
+
+  #info-card {
+    position: fixed;
+    left: var(--space-md);
+    right: var(--space-md);
+    top: 118px;
+    width: auto;
+    max-width: 360px;
+    max-height: calc(100dvh - 134px);
+    margin-left: auto;
+    overflow-y: auto;
+    transform: translateY(-8px) scale(0.98);
+    transform-origin: top right;
+    z-index: 1000;
+  }
+
+  #info-trigger:hover #info-card,
+  #info-trigger:focus-within #info-card,
+  #info-trigger.is-open #info-card {
+    transform: translateY(0) scale(1);
+  }
+}

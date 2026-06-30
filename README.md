@@ -1,6 +1,6 @@
 # Dravknox Studios: Website
 
-**Live site:** [dravknox-studios.github.io](https://dravknox-studio.github.io) <!-- update with your actual URL -->
+**Live site:** [dravknox.github.io](https://dravknox.github.io) <!-- update with your actual URL -->
 
 The official website for Dravknox Studios, an independent creative studio spanning tech, games, 3D art, and music. One founder. Three divisions. Built to last.
 

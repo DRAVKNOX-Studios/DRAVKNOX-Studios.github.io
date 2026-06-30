@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════════
+     PRIMARY SEO
+════════════════════════════════════════════════════ -->
+<title>Payne-less: Typer - A Keyboard That Just Works</title>
+<meta name="description" content="A lightweight, private Android keyboard built in pure Java. No cloud, no tracking, no bloat. 4 MB total. Auto-correct, themes, clipboard memory — all on-device.">
+<meta name="keywords" content="Android keyboard, open source keyboard, private keyboard, lightweight keyboard, AOSP keyboard, GrapheneOS keyboard, LineageOS keyboard, Payne-less Typer, DRAVKNOX, Java keyboard app">
+<meta name="author" content="DRAVKNOX Studios">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff5c5c">
+<link rel="canonical" href="https://DRAVKNOX-Studios.github.io/typer.html">
+
+<!-- ═══════════════════════════════════════════════════
+     OPEN GRAPH (Facebook, LinkedIn, Discord, WhatsApp)
+════════════════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DRAVKNOX Studios">
+<meta property="og:title" content="Payne-less: Typer - A Keyboard That Just Works">
+<meta property="og:description" content="A lightweight, private Android keyboard built in pure Java. No cloud, no tracking, no bloat. 4 MB total. Predictions, auto-correct, themes, clipboard memory — all running entirely on your device.">
+<meta property="og:url" content="https://DRAVKNOX-Studios.github.io/typer.html">
+<meta property="og:image" content="https://DRAVKNOX-Studios.github.io/assets/favicon/typer/android-chrome-512x512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Payne-less: Typer app icon - a minimal keyboard illustration in red and white">
+<meta property="og:locale" content="en_US">
+
+<!-- ═══════════════════════════════════════════════════
+     TWITTER / X CARD
+════════════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Payne-less: Typer - A Keyboard That Just Works">
+<meta name="twitter:description" content="Lightweight. Private. Fast. Free. An Android keyboard with zero internet permission, built in pure Java. Auto-correct, themes, clipboard memory — all on-device.">
+<meta name="twitter:image" content="https://DRAVKNOX-Studios.github.io/assets/favicon/typer/android-chrome-512x512.png">
+<meta name="twitter:image:alt" content="Payne-less: Typer app icon">
+<meta name="twitter:creator" content="@DRAVKNOX">
+<meta name="twitter:site" content="@DRAVKNOX">
+
+<!-- ═══════════════════════════════════════════════════
+     FAVICONS & WEB APP MANIFEST
+════════════════════════════════════════════════════ -->
+<link rel="icon" type="image/x-icon" href="assets/favicon/typer/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/typer/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/typer/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/typer/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/typer/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/typer/android-chrome-512x512.png">
+<link rel="manifest" href="assets/favicon/typer/site.webmanifest">
+<meta name="msapplication-TileColor" content="#ff5c5c">
+<meta name="msapplication-TileImage" content="assets/favicon/typer/android-chrome-192x192.png">
+
+<!-- ═══════════════════════════════════════════════════
+     STRUCTURED DATA (JSON-LD)
+════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Payne-less: Typer",
+  "operatingSystem": "Android",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A lightweight, private Android keyboard built in pure Java. No cloud, no tracking, no bloat. Features auto-correct, predictive text, themes, and clipboard memory — all on-device.",
+  "author": {
+    "@type": "Organization",
+    "name": "DRAVKNOX Studios"
+  },
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://DRAVKNOX-Studios.github.io/typer.html",
+  "image": "https://DRAVKNOX-Studios.github.io/assets/favicon/typer/android-chrome-512x512.png"
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     FONTS
+════════════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════
+     STYLESHEETS
+════════════════════════════════════════════════════ -->
+<link rel="stylesheet" href="css/typer/base.css">
+<link rel="stylesheet" href="css/typer/scrollbar.css">
+<link rel="stylesheet" href="css/typer/header-hero.css">
+<link rel="stylesheet" href="css/typer/tester.css">
+<link rel="stylesheet" href="css/typer/features.css">
+<link rel="stylesheet" href="css/typer/gallery-downloads.css">
+<link rel="stylesheet" href="css/lightbox/lightbox-base.css">
+<link rel="stylesheet" href="css/lightbox/lightbox-ui.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="home-btn" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+    </a>
+    <div class="brand">
+      <svg class="brand-icon" id="brandIcon" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="20" width="48" height="32" rx="6" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="15" y="35" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="24" y="35" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="33" y="35" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="42" y="35" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="15" y="44" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="24" y="44" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="33" y="44" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+        <rect x="42" y="44" width="6" height="6" rx="1.5" stroke="#ff5c5c" stroke-width="2.5"/>
+
+        <circle cx="23" cy="20" r="7.5" fill="#f2f2f0" stroke="#ff5c5c" stroke-width="2"/>
+        <circle cx="41" cy="20" r="7.5" fill="#f2f2f0" stroke="#ff5c5c" stroke-width="2"/>
+        <circle class="googly-pupil" data-eye="1" cx="23" cy="20" r="3" fill="#0a0a0a"/>
+        <circle class="googly-pupil" data-eye="2" cx="41" cy="20" r="3" fill="#0a0a0a"/>
+      </svg>
+      <div class="brand-text">
+        <h1>Payne-less: Typer</h1>
+        <div class="brand-tagline">Light · Private · Fast · Free</div>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#code">Code</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">Pure Java · Zero XML · 4MB total</div>
+  <h2>A keyboard that <span>just works,</span><br>without making your phone sweat</h2>
+  <p class="hero-desc">Built from scratch with custom canvas rendering instead of heavy layouts. Predictions, auto-correct, themes, clipboard memory, all running entirely on your device. No internet permission, no exceptions.</p>
+  <div class="hero-actions">
+    <a href="#downloads" class="btn btn-primary">Get the APK</a>
+    <a href="#code" class="btn btn-ghost">View the code</a>
+  </div>
+  <div class="quote-stack" id="quoteStack"></div>
+</section>
+
+<div class="tester-wrap">
+  <div class="tester-card">
+    <div class="tester-bar">
+      <h3>Keyboard Tester</h3>
+      <span class="tester-wpm" id="testerWpm">0 WPM</span>
+    </div>
+    <div class="tester-screen" id="testerScreen"></div>
+    <button class="tester-clear" id="testerClear">Clear</button>
+    <div class="tester-keys" id="testerKeys"></div>
+  </div>
+</div>
+
+<section class="section" id="features">
+  <div class="eyebrow">The good stuff</div>
+  <h2 class="section-heading">Everything you actually need for daily typing</h2>
+  <p class="section-sub">No AI assistant pretending to be a keyboard. Just the features that earn their keep, every single day.</p>
+  <div class="feature-grid" id="featureGrid"></div>
+</section>
+
+<section class="section" id="performance">
+  <div class="eyebrow">How it performs</div>
+  <h2 class="section-heading">Measured, not promised</h2>
+  <p class="section-sub">Pulled straight from ADB profiling. This app doesn't treat your RAM like an all-you-can-eat buffet.</p>
+  <div class="stats-grid" id="statsGrid"></div>
+  <h3 style="margin-top:56px; font-size:18px; color:var(--accent);">Under the hood</h3>
+  <ul class="hood-list" id="hoodList"></ul>
+</section>
+
+<section class="section" id="requirements">
+  <div class="eyebrow">Requirements</div>
+  <h2 class="section-heading">Floor and ceiling</h2>
+  <p class="section-sub">Built on a de-Googled Android 8.1 device. It should feel right at home on GrapheneOS, LineageOS, AOSP, and most custom ROMs.</p>
+  <div class="req-grid">
+    <div class="req-card">
+      <h3>Minimum</h3>
+      <div id="reqMin"></div>
+    </div>
+    <div class="req-card">
+      <h3>Maximum (tested up to)</h3>
+      <div id="reqMax"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="audience">
+  <div class="eyebrow">Is this for you</div>
+  <h2 class="section-heading">Know before you install</h2>
+  <div class="audience-grid">
+    <div class="audience-card yes">
+      <h3>Probably yes if</h3>
+      <ul id="audienceYes"></ul>
+    </div>
+    <div class="audience-card no">
+      <h3>Probably not if</h3>
+      <ul id="audienceNo"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="screenshots">
+  <div class="eyebrow">Feast your eyes</div>
+  <h2 class="section-heading">Shot on Android 8.1</h2>
+  <p class="section-sub">Fonts and rendering vary a little by Android version and hardware, so don't be alarmed if yours looks slightly different.</p>
+  <div class="gallery-grid" id="galleryGrid" data-lightbox-group></div>
+</section>
+
+<section class="section" id="downloads">
+  <div class="eyebrow">Get it</div>
+  <h2 class="section-heading">Downloads</h2>
+  <p class="section-sub">Pick your poison. All three roads lead to the same keyboard.</p>
+  <div class="link-grid" id="downloadGrid"></div>
+</section>
+
+<section class="section" id="code">
+  <div class="eyebrow">For the developers</div>
+  <h2 class="section-heading">Poke the internals</h2>
+  <p class="section-sub">Mmap dictionary, zero layout inflation, a bigram model that actually learns. Everything's open if you want to see how it ticks.</p>
+  <div class="link-grid" id="codeGrid"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-brand">Payne-less: Typer</div>
+  <div>MIT licensed, branding stays with DRAVKNOX Studios. Have a painless typing journey ahead.</div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" tabindex="-1">
+  <div class="lightbox-backdrop" aria-hidden="true"></div>
+  <div class="lightbox-panel">
+    <header class="lightbox-header">
+      <div class="lightbox-meta">
+        <span class="lightbox-counter"></span>
+        <span class="lightbox-caption"></span>
+      </div>
+      <button class="lightbox-close" aria-label="Close viewer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </header>
+    <div class="lightbox-zoom-bar" aria-label="Zoom controls">
+      <button class="lightbox-zoom-btn lightbox-zoom-out" aria-label="Zoom out">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </button>
+      <span class="lightbox-zoom-level" aria-live="polite">100%</span>
+      <button class="lightbox-zoom-btn lightbox-zoom-in" aria-label="Zoom in">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </button>
+      <button class="lightbox-zoom-btn lightbox-zoom-reset" aria-label="Reset zoom">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+    <div class="lightbox-stage">
+      <button class="lightbox-nav prev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img class="lightbox-img" src="" alt="" />
+      </div>
+      <button class="lightbox-nav next" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="lightbox-strip" role="list" aria-label="Image thumbnails"></div>
+  </div>
+</div>
+
+<script src="data/typer/content.js"></script>
+<script src="js/typer/tester.js"></script>
+<script src="js/typer/main.js"></script>
+<script src="js/typer/googly.js"></script>
+<script src="js/lightbox/lightbox.js"></script>
+<script src="js/lightbox/lightbox-init.js"></script>
+</body>
+</html>

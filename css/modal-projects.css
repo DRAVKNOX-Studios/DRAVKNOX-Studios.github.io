@@ -1,0 +1,161 @@
+/* ============================================================
+   modal-projects.css — Project grid, project cards, platform
+   icon strip, and fallback letter-avatars inside the modal.
+   Split from modal.css
+   ============================================================ */
+
+/* ── Project grid ───────────────────────────────────────────── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+/* ── Project card ───────────────────────────────────────────── */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    background     var(--dur-fast),
+    border-color   var(--dur-fast),
+    transform      var(--dur-fast);
+}
+
+.project-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-card);
+  transform: translateY(-2px);
+}
+
+/* ── Icon container ─────────────────────────────────────────── */
+.project-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Letter-avatar fallback when no icon path is set */
+.project-icon-fallback {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  color: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+}
+
+#division-modal[data-division="talvrek"]  .project-icon-fallback {
+  background: rgba(122, 172, 204, 0.15);
+  border: 1px solid rgba(122, 172, 204, 0.25);
+  color: var(--accent-talvrek);
+}
+#division-modal[data-division="embrvaal"] .project-icon-fallback {
+  background: rgba(204, 58, 42, 0.12);
+  border: 1px solid rgba(204, 58, 42, 0.25);
+  color: var(--accent-embrvaal);
+}
+#division-modal[data-division="veltrun"]  .project-icon-fallback {
+  background: rgba(74, 143, 204, 0.12);
+  border: 1px solid rgba(74, 143, 204, 0.25);
+  color: var(--accent-veltrun);
+}
+
+/* ── Text ───────────────────────────────────────────────────── */
+.project-name {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.project-tagline {
+  font-size: 0.65rem;
+  font-weight: var(--weight-regular);
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* ── Platform icon strip ────────────────────────────────────── */
+.project-platforms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+.platform-icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  flex-shrink: 0;
+  transition: opacity var(--dur-fast);
+  color: var(--icon-primary);
+}
+
+.project-card:hover .platform-icon { opacity: 0.8; }
+
+.platform-icon svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  display: block;
+}
+
+.platform-icon[title] { cursor: default; }
+.project-platforms:empty { display: none; }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .project-card {
+    padding: 16px 10px 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

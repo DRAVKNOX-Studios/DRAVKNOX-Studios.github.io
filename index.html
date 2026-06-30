@@ -1,457 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dravknox Studios - Payne-less UI: Great Granddaddy</title>
-  <meta name="description" content="Dravknox Studios, an independent creative studio spanning tech, creative work, and music. Three divisions. One founder. Built to last."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Payne-less UI: Great Granddaddy by Dravknox Studios, home to independent software, games, music, and owned-first creative tools." />
+  <meta name="author" content="Dravknox Studios" />
+  <meta name="application-name" content="Payne-less UI" />
+  <meta name="keywords" content="Dravknox Studios, Payne-less UI, Payne-less Typer, indie software, indie games, music studio" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#080A0F" />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Payne-less UI: Great Granddaddy" />
+  <meta property="og:description" content="Independent software, games, and music from Dravknox Studios." />
+  <meta property="og:site_name" content="Dravknox Studios" />
+  <meta property="og:image" content="assets/images/talvrek-logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Payne-less UI: Great Granddaddy" />
+  <meta name="twitter:description" content="Independent software, games, and music from Dravknox Studios." />
+  <meta name="twitter:image" content="assets/images/talvrek-logo.png" />
+  <title>Payne-less UI: Great Granddaddy</title>
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://dravknox.github.io/"/>
+  <!--
+    Fonts:
+    Space Grotesk — display, sharp & geometric, not fantasy
+    Inter         — body text
+    JetBrains Mono— background code layer
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono&display=swap" rel="stylesheet" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Dravknox Studios - Three Divisions, One Founder"/>
-  <meta property="og:description" content="Independent creative studio spanning tech, creative work, and music. No subscriptions. No bloat. Three divisions. One founder. Built to last."/>
-  <meta property="og:image" content="https://dravknox.github.io/assets/logo/DRAVKNOX%20Studio%204k.png"/>
-  <meta property="og:url" content="https://dravknox.github.io/"/>
-  <meta property="og:site_name" content="Dravknox Studios"/>
-
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Dravknox Studios - Three Divisions, One Founder"/>
-  <meta name="twitter:description" content="Independent creative studio spanning tech, creative work, and music. No subscriptions. No bloat. Built to last."/>
-  <meta name="twitter:image" content="https://dravknox.github.io/assets/og-image.png"/>
-
-  <!-- Theme color -->
-  <meta name="theme-color" content="#0a0a0a"/>
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Dravknox Studios",
-    "alternateName": "DRAVKNOX",
-    "url": "https://dravknox.github.io/",
-    "description": "Independent creative studio founded by Dakiee in 2020. Three divisions covering FOSS software, story-driven games and 3D art, and original music. Built by consumers, for consumers. No subscriptions. No bloat.",
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "Dakiee",
-      "jobTitle": "Founder and Lead Developer",
-      "description": "Solo developer, 3D artist, and music producer behind Dravknox Studios. Building across code, art, and music since 2020.",
-      "knowsAbout": ["Python", "Web Applications", "Godot Engine", "Blender", "Music Production", "FOSS Software"]
-    },
-    "department": [
-      {
-        "@type": "Organization",
-        "name": "Talvrek",
-        "description": "The software division of Dravknox Studios. Builds FOSS-first apps and Python tools for everyday people and indie developers. Anti-bloat, anti-subscription software that works and keeps working.",
-        "slogan": "Systems that outlast empires.",
-        "knowsAbout": ["Python", "Web Applications", "FOSS", "Open Source Software", "Developer Tools"]
-      },
-      {
-        "@type": "Organization",
-        "name": "Embrvaal",
-        "description": "The creative division of Dravknox Studios. Produces story-driven, stylized-realistic 3D action-adventure games in Godot, optimized for hardware people actually own. Also covers Blender renders and visual content.",
-        "slogan": "Art that evokes WTF is that?",
-        "knowsAbout": ["Godot Engine", "Blender", "3D Art", "Game Development", "Visual Content"]
-      },
-      {
-        "@type": "Organization",
-        "name": "Veltrun",
-        "description": "The music division of Dravknox Studios. Rock, Nu Metal, and Synthwave remixed from CC0 sources, scored for Embrvaal games and released on YouTube.",
-        "slogan": "Louder than it needs to be. Exactly as intended.",
-        "knowsAbout": ["Rock Music", "Nu Metal", "Synthwave", "CC0 Music", "Music Production", "Audio Remixing"]
-      }
-    ],
-    "sameAs": [],
-    "publishingPrinciples": "FOSS-first development. Consumer-friendly software and games. No subscriptions. No bait-and-switch pricing.",
-    "knowsAbout": [
-      "FOSS Software Development",
-      "Indie Game Development",
-      "3D Art and Rendering",
-      "Music Production",
-      "Python Development",
-      "Godot Engine",
-      "Blender"
-    ]
-  }
-  </script>
-
-  <meta name="google-site-verification" content="RjcQ87OpOz5i6x3etgDwGCQFiJetimhVwf1FFqPov70" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"/>
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png"/>
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png"/>
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico"/>
-  <link rel="manifest" href="assets/favicon/site.webmanifest"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Stylesheets: tokens first, then layout, then components, then overrides -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <!-- Hero, cards, controls (split from components.css) -->
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/controls.css" />
+  <link rel="stylesheet" href="css/background.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <!-- Modal (split from modal.css) -->
+  <link rel="stylesheet" href="css/modal-base.css" />
+  <link rel="stylesheet" href="css/modal-projects.css" />
+  <link rel="stylesheet" href="css/dropup.css" />
+  <!-- Chatbot (split from chatbot.css) -->
+  <link rel="stylesheet" href="css/chatbot-panel.css" />
+  <link rel="stylesheet" href="css/chatbot-messages.css" />
+  <link rel="stylesheet" href="css/statscard.css" />
+  <!-- Info card (split from infocard.css) -->
+  <link rel="stylesheet" href="css/infocard-layout.css" />
+  <link rel="stylesheet" href="css/infocard-content.css" />
+  <link rel="stylesheet" href="css/project-status.css" />
 </head>
 <body>
 
-<div class="root" id="R">
+  <!-- Procedural background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <!-- BOOT SCREEN: pick your division. four choices. no wrong answers. (probably.) -->
-  <div class="screen active" id="sb" role="main" aria-label="Brand selection boot screen">
-    <div class="boot-scanlines"></div>
-    <div class="boot-grid"></div>
-    <div class="boot-center">
-      <div class="boot-label">// INITIALIZING Payne-less UI: Great Grand-daddy</div>
-      <div class="boot-title">Payne-less UI: Great Grand-daddy</div>
-      <div class="boot-sub">SELECT YOUR DIVISION</div>
-      <div class="boot-prompt">-- choose a division to enter --</div>
-      <div class="boot-cards" role="list">
+  <div id="page">
 
-        <div class="bcard pro-c" role="listitem" tabindex="0" id="boot-pro-card" aria-label="Enter Professional site">
-          <div class="bem pro-em"><img src="assets/logo/DRAVKNOX Studio 4k.png" alt="Dravknox Studio" style="width:40px;height:40px;object-fit:contain;"></div>
-          <div class="bn">DRAVKNOX</div>
-          <div class="bsub">MAIN SITE<br>STUDIO HQ</div>
-          <div class="btag pro-tag">PRO SITE</div>
+    <!-- ════ Left sidebar: Stats ═══════════════════════ -->
+    <aside id="sidebar-left">
+      <!-- Hover trigger wraps button + card together -->
+      <div id="stats-trigger">
+        <button id="btn-stats" class="sidebar-btn" aria-label="View studio stats"
+                aria-describedby="stats-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="3"  y="12" width="4" height="9" rx="1"/>
+            <rect x="10" y="7"  width="4" height="14" rx="1"/>
+            <rect x="17" y="3"  width="4" height="18" rx="1"/>
+          </svg>
+          <span>Stats</span>
+        </button>
+
+        <!-- Stats card — populated by js/statscard.js, shown on hover -->
+        <div id="stats-card" role="complementary" aria-label="Studio statistics">
+          <!-- Content injected by statscard.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- ════ Center: Hero + Divisions ══════════════════════ -->
+    <main id="center">
+
+      <section id="hero" aria-label="Dravknox Studios">
+        <div class="hero-rule" aria-hidden="true"><span class="hero-rule-dot"></span></div>
+
+        <!--
+          DRAVKNOX: Space Grotesk Bold — sharp, geometric, modern.
+          No serifs, no fantasy weight. Red is a signal, not decoration.
+        -->
+        <h1 class="hero-name">DRAVKNOX</h1>
+        <p  class="hero-suffix">STUDIOS</p>
+
+        <div class="hero-rule" aria-hidden="true"><span class="hero-rule-dot"></span></div>
+
+        <p class="hero-tagline">Software&nbsp;&nbsp;·&nbsp;&nbsp;Games&nbsp;&nbsp;·&nbsp;&nbsp;Music</p>
+        <p class="hero-sub">Building stuff with personality that lasts.</p>
+      </section>
+
+      <!-- Division CTAs -->
+      <nav id="divisions" aria-label="Studio divisions">
+
+        <!-- Talvrek — Software (Phase 2: custom panel, not a page link) -->
+        <button class="division-card" data-division="talvrek"
+                data-action="open-division"
+                aria-label="Talvrek — Software, Tools and Systems">
+          <div class="division-logo-slot" aria-hidden="true">
+            <img src="assets/images/talvrek-logo.png" alt="" />
+          </div>
+          <p class="division-name">Talvrek</p>
+          <p class="division-label">Software</p>
+          <p class="division-sub">Tools &amp; Systems</p>
+        </button>
+
+        <!-- Embrvaal — Games (Phase 2: custom panel, not a page link) -->
+        <button class="division-card" data-division="embrvaal"
+                data-action="open-division"
+                aria-label="Embrvaal — Games, Worlds and Experiences">
+          <div class="division-logo-slot" aria-hidden="true">
+            <img src="assets/images/embrvaal-logo.png" alt="" />
+          </div>
+          <p class="division-name">Embrvaal</p>
+          <p class="division-label">Games</p>
+          <p class="division-sub">Worlds &amp; Experiences</p>
+        </button>
+
+        <!-- Veltrun — Music (Phase 2: custom panel, not a page link) -->
+        <button class="division-card" data-division="veltrun"
+                data-action="open-division"
+                aria-label="Veltrun — Music, Sound and Emotion">
+          <div class="division-logo-slot" aria-hidden="true">
+            <img src="assets/images/veltrun-logo.png" alt="" />
+          </div>
+          <p class="division-name">Veltrun</p>
+          <p class="division-label">Music</p>
+          <p class="division-sub">Sound &amp; Emotion</p>
+        </button>
+
+        <!-- The Vault — Lore -->
+        <a class="division-card" data-division="vault"
+           href="vault/index.html"
+           aria-label="The Vault — Lore, Secrets and Experiments">
+          <!-- Vault uses an icon, not a photo logo -->
+          <div class="division-logo-slot icon-slot vault-icon" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Arch frame -->
+              <path d="M10 56 L10 28 Q10 8 30 8 Q50 8 50 28 L50 56"
+                    stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+              <!-- Inner arch panel -->
+              <path d="M16 54 L16 30 Q16 16 30 16 Q44 16 44 30 L44 54"
+                    stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"
+                    stroke-linecap="round"/>
+              <!-- Hinge bolts -->
+              <circle cx="13" cy="32" r="1.8" fill="currentColor" opacity="0.7"/>
+              <circle cx="13" cy="44" r="1.8" fill="currentColor" opacity="0.7"/>
+              <circle cx="47" cy="32" r="1.8" fill="currentColor" opacity="0.7"/>
+              <circle cx="47" cy="44" r="1.8" fill="currentColor" opacity="0.7"/>
+              <!-- Keyhole ring -->
+              <circle cx="30" cy="35" r="5.5" stroke="currentColor" stroke-width="1.4" fill="none"/>
+              <!-- Keyhole slot -->
+              <path d="M28 40 L28 48 L32 48 L32 40"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
+              <!-- Keyhole glow dot -->
+              <circle cx="30" cy="35" r="2.5" fill="currentColor" opacity="0.55"/>
+            </svg>
+          </div>
+          <p class="division-name">The Vault</p>
+          <p class="division-label">Lore</p>
+          <p class="division-sub">Secrets &amp; Experiments</p>
+        </a>
+
+      </nav>
+    </main>
+
+    <!-- ════ Right sidebar: Info ════════════════════════ -->
+    <aside id="sidebar-right">
+      <!-- Hover trigger wraps button + card together -->
+      <div id="info-trigger">
+        <!-- Info card — populated by js/infocard.js, shown on hover -->
+        <div id="info-card" role="complementary" aria-label="Studio information">
+          <!-- Content injected by infocard.js -->
         </div>
 
-        <div class="bcard dk-c" role="listitem" tabindex="0" data-brand="dk" aria-label="Enter Talvrek division">
-          <div class="bem"><img src="assets/logo/Talvrek 4k.png" alt="Talvrek" style="width:40px;height:40px;object-fit:contain;"></div>
-          <div class="bn">TALVREK</div>
-          <div class="bsub">TECH · DEV<br>SYSTEMS</div>
-          <div class="btag">TECH</div>
+        <button id="btn-info" class="sidebar-btn" aria-label="About Dravknox Studios"
+                aria-describedby="info-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <circle cx="12" cy="8" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Info</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ════ Bottom row: Controls dock ══════════════════════ -->
+    <div id="bottom">
+      <div id="controls" role="toolbar" aria-label="Display controls">
+
+        <!-- Theme -->
+        <button id="ctrl-theme" class="ctrl-btn"
+                aria-label="Switch to light theme" aria-pressed="false"
+                title="Light mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+            <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+          </svg>
+          <span>Theme</span>
+        </button>
+
+        <!-- Motion -->
+        <button id="ctrl-motion" class="ctrl-btn"
+                aria-label="Disable animation" aria-pressed="false"
+                title="Disable animation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+          </svg>
+          <span>Motion</span>
+        </button>
+
+        <div id="chat-anchor">
+          <section id="chatbot-panel" aria-label="SIGIL chatbot" aria-hidden="true">
+            <header class="chatbot-topbar">
+              <span class="chatbot-avatar bot-avatar" aria-hidden="true">S</span>
+              <span class="chatbot-title">SIGIL</span>
+              <button class="chatbot-close" aria-label="Close chatbot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </header>
+            <div class="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+            <div class="chatbot-chips" aria-label="Suggested questions"></div>
+            <form class="chatbot-form" autocomplete="off">
+              <input id="chatbot-input" name="message" type="text"
+                     aria-label="Ask SIGIL a question" placeholder="Ask SIGIL..." />
+              <button class="chatbot-send" type="submit" aria-label="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                  <path d="M22 2L11 13"/>
+                  <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+                </svg>
+              </button>
+            </form>
+          </section>
+
+          <button id="ctrl-chatbot" class="ctrl-btn"
+                  aria-label="Open chatbot" aria-expanded="false"
+                  aria-controls="chatbot-panel" title="Chatbot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>Chatbot</span>
+          </button>
         </div>
 
-        <div class="bcard vl-c" role="listitem" tabindex="0" data-brand="vl" aria-label="Enter Embrvaal division">
-          <div class="bem"><img src="assets/logo/Embrvaal 4k.png" alt="embrvaal" style="width:40px;height:40px;object-fit:contain;"></div>
-          <div class="bn">EMBRVAAL</div>
-          <div class="bsub">ART · GAMES<br>WRITING</div>
-          <div class="btag">CREATIVE</div>
-        </div>
+        <!-- Contact + drop-up anchor -->
+        <div id="contact-anchor">
+          <!-- Drop-up list — populated by data/contacts.js + js/dropup-render.js + js/dropup-core.js -->
+          <div id="contact-dropup" role="listbox" aria-label="Contact platforms">
+            <div class="dropup-header">Connect</div>
+            <ul class="dropup-list"></ul>
+          </div>
 
-        <div class="bcard em-c" role="listitem" tabindex="0" data-brand="em" aria-label="Enter Veltrun division">
-          <div class="bem"><img src="assets/logo/Veltrun 4k.png" alt="veltrun" style="width:40px;height:40px;object-fit:contain;"></div>
-          <div class="bn">VELTRUN</div>
-          <div class="bsub">MUSIC · AUDIO<br>SIGNAL</div>
-          <div class="btag">MUSIC</div>
+          <button id="ctrl-contact" class="ctrl-btn"
+                  aria-label="Contact Dravknox Studios"
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-controls="contact-dropup"
+                  title="Contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+            <span>Contact</span>
+          </button>
         </div>
 
       </div>
     </div>
-    <div class="boot-footer">DRAVKNOX STUDIOS &nbsp;·&nbsp; ALL DIVISIONS OPERATIONAL &nbsp;·&nbsp; Payne-less UI: Great Grand-daddy</div>
-  </div>
 
-  <!-- TALVREK DESKTOP: the tech division screen. red. sharp. no-nonsense. -->
-  <div class="screen" id="sdk" data-theme="dk">
-    <div class="desk">
-      <div class="bgrid"></div>
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-      <div class="orb orb3"></div>
-      <div class="scanlines"></div>
+  </div><!-- /#page -->
 
-      <div class="icons-left">
-        <div class="di shared-trigger" data-shared="founder" tabindex="0" aria-label="About Founder"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
-      </div>
-      <div class="icons-right">
-        <div class="di" data-win="dk-about" tabindex="0" aria-label="About Talvrek"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
-        <div class="di shared-trigger" data-shared="news" tabindex="0" aria-label="News"><div class="dib">📡</div><div class="dil">NEWS</div></div>
-        <div class="di shared-trigger" data-shared="contact" tabindex="0" aria-label="Contact"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
-        <div class="di shared-trigger" data-shared="faq" tabindex="0" aria-label="SIGIL"><div class="dib">🤖</div><div class="dil">SIGIL</div></div>
-      </div>
-
-      <div class="hdr-widget">
-        <div class="hey">// DRAVKNOX STUDIOS</div>
-        <div class="hna">TALVREK</div>
-        <div class="hsl">Systems that outlast empires.</div>
-        <div class="hdiv"></div>
-        <div class="htags">
-          <span class="htag">SOFTWARE</span>
-          <span class="htag">APPS</span>
-          <span class="htag">FOSS</span>
-          <span class="htag">ANTI-BLOAT</span>
+  <!-- ══ Division project modal ════════════════════════════════════════════
+       Populated by data/projects.js + js/modal-projects.js + js/modal-core.js
+  ════════════════════════════════════════════════ -->
+  <div id="division-modal" role="dialog" aria-modal="true"
+       aria-labelledby="modal-title">
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-panel">
+      <header class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-division-label">Division</span>
+          <h2 class="modal-title" id="modal-title">Projects</h2>
         </div>
-      </div>
-
-      <!-- division windows (the ones that are actually open right now): -->
-      <!-- dk-apps, dk-scripts, dk-tools removed. products coming soon. -->
-
-      <div class="win" id="dk-about" style="width:310px;height:220px;top:68px;left:120px;">
-        <div class="wbar" data-win="dk-about"><div class="wbtns"><button class="wb cl" data-close="dk-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT TALVREK</div></div>
-        <div class="wbody about-body">
-          <p class="ab-label">SOFTWARE DIVISION · FOSS-FIRST</p>
-          <p class="ab-text">Talvrek builds apps and tools for everyday people and indie devs. Python, web apps, and whatever else needs building. FOSS by default. Anti-bloat, anti-subscription, anti-Adobe. Software that works and keeps working.</p>
-          <p class="ab-slogan">Systems that outlast empires.</p>
-        </div>
-      </div>
-
-      <div class="ticker-wrap">
-        <div class="tkl">TK</div>
-        <div class="tkt-track"><span class="tks">◈ TALVREK: FOSS apps for people, not shareholders</span><span class="tksep">///</span><span class="tks">No subscriptions. No bloat. No Philippe Tremblay.</span><span class="tksep">///</span><span class="tks">Built by consumers, for consumers</span><span class="tksep">///</span><span class="tks">Systems that outlast empires.</span><span class="tksep">///</span></div>
-      </div>
-
-      <div class="tbar">
-        <button class="sbtn" data-sm="dk-sm">⬡ Payne-less UI: Great Grand-daddy</button>
-        <div class="tdiv"></div>
-        <div class="ttasks" id="dk-tb"></div>
-        <div class="tdiv"></div>
-        <div class="tray">
-          <span class="trico" title="Network">📡</span>
-          <span class="trico" title="Audio">🔊</span>
-          <div class="tclk" id="dk-clk">--:--</div>
-        </div>
-      </div>
-
-      <button class="bbtn" data-back>← BOOT</button>
-
-      <div class="smenu" id="dk-sm">
-        <div class="smhdr"><div class="smlogo">TALVREK</div></div>
-        <div class="smi" data-win="dk-about"><span class="si">🏢</span>About Division</div>
-        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
-        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
-        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
-        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>SIGIL</div>
-        <div class="smdiv"></div>
-        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
-      </div>
+        <button class="modal-close" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6"  x2="6"  y2="18"/>
+            <line x1="6"  y1="6"  x2="18" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body" role="list" aria-live="polite"></div>
+      <footer class="modal-footer">
+        <span class="modal-footer-note"></span>
+      </footer>
     </div>
   </div>
 
-  <!-- EMBRVAAL DESKTOP: the creative division screen. blue. cinematic. slightly unhinged. -->
-  <div class="screen" id="svl" data-theme="vl">
-    <div class="desk">
-      <div class="bgrid"></div>
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-      <div class="orb orb3"></div>
-      <div class="scanlines"></div>
+  <!-- Load order:
+       data → background (core first, layers second)
+       → theme → main utilities
+       → modal-projects then modal-core (render module before logic module)
+       → dropup-render then dropup-core (render module before logic module)
+       → chatbot → main
+  -->
+  <script src="data/studio.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/contacts.js"></script>
+  <script src="data/chatbot.js"></script>
+  <!-- Background: core sets up canvas/palette/loop; layers draws the 4 streams -->
+  <script src="js/bg-core.js"></script>
+  <script src="js/bg-layers.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/statscard.js"></script>
+  <script src="js/infocard.js"></script>
+  <script src="js/project-status.js"></script>
+  <!-- Modal: projects builds card HTML; core handles open/close/events -->
+  <script src="js/modal-projects.js"></script>
+  <script src="js/modal-core.js"></script>
+  <!-- Dropup: render builds list items; core handles open/close/events -->
+  <script src="js/dropup-render.js"></script>
+  <script src="js/dropup-core.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
 
-      <div class="icons-left">
-        <div class="di shared-trigger" data-shared="founder" tabindex="0"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
-      </div>
-      <div class="icons-right">
-        <div class="di" data-link="404.html" tabindex="0"><div class="dib">🐦</div><div class="dil">FLOPPY BIRD</div></div>
-        <div class="di" data-win="vl-about" tabindex="0"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
-        <div class="di shared-trigger" data-shared="news" tabindex="0"><div class="dib dib-r">📡</div><div class="dil">NEWS</div></div>
-        <div class="di shared-trigger" data-shared="contact" tabindex="0"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
-        <div class="di shared-trigger" data-shared="faq" tabindex="0"><div class="dib">🤖</div><div class="dil">SIGIL</div></div>
-      </div>
-
-      <div class="hdr-widget">
-        <div class="hey">// DRAVKNOX STUDIOS</div>
-        <div class="hna">EMBRVAAL</div>
-        <div class="hsl">Art that evokes WTF is that?</div>
-        <div class="hdiv"></div>
-        <div class="htags">
-          <span class="htag">GAMES</span>
-          <span class="htag htag-r">3D ART</span>
-          <span class="htag">GODOT</span>
-          <span class="htag htag-r">BLENDER</span>
-        </div>
-      </div>
-
-      <!-- vl-games, vl-art, vl-content, confidential removed. products coming soon. -->
-
-      <div class="win" id="vl-about" style="width:310px;height:215px;top:66px;left:118px;">
-        <div class="wbar" data-win="vl-about"><div class="wbtns"><button class="wb cl" data-close="vl-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT EMBRVAAL</div></div>
-        <div class="wbody about-body">
-          <p class="ab-label">CREATIVE DIVISION</p>
-          <p class="ab-text">Embrvaal makes story-driven, stylized-realistic 3D action-adventure games in Godot, built to run on hardware you actually own. Blender renders. Pure creative output. No filler, no padding, no 80GB day-one patch.</p>
-          <p class="ab-slogan">Art that evokes WTF is that?</p>
-        </div>
-      </div>
-
-      <div class="ticker-wrap">
-        <div class="tkl">EM</div>
-        <div class="tkt-track"><span class="tks">◈ EMBRVAAL: story-driven 3D games, optimized for your actual PC</span><span class="tksep">///</span><span class="tks">No 80GB patches. No battle passes. Just the game.</span><span class="tksep">///</span><span class="tks">Blender renders dropping soon</span><span class="tksep">///</span><span class="tks">Art that evokes WTF is that?</span><span class="tksep">///</span></div>
-      </div>
-
-      <div class="tbar">
-        <button class="sbtn" data-sm="vl-sm">⬡ Payne-less UI: Great Grand-daddy</button>
-        <div class="tdiv"></div>
-        <div class="ttasks" id="vl-tb"></div>
-        <div class="tdiv"></div>
-        <div class="tray">
-          <span class="trico">📡</span>
-          <span class="trico">🔊</span>
-          <div class="tclk" id="vl-clk">--:--</div>
-        </div>
-      </div>
-
-      <button class="bbtn" data-back>← BOOT</button>
-
-      <div class="smenu" id="vl-sm">
-        <div class="smhdr"><div class="smlogo">EMBRVAAL</div></div>
-        <div class="smi" data-link="404.html"><span class="si">🐦</span>Floppy Bird</div>
-        <div class="smi" data-win="vl-about"><span class="si">🏢</span>About Division</div>
-        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
-        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
-        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
-        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>SIGIL</div>
-        <div class="smdiv"></div>
-        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- VELTRUN DESKTOP: the music division screen. orange. loud. exactly as intended. -->
-  <div class="screen" id="sem" data-theme="em">
-    <div class="desk">
-      <div class="bgrid"></div>
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-      <div class="orb orb3"></div>
-      <div class="orb orb3"></div>
-      <div class="scanlines"></div>
-
-      <div class="icons-left">
-        <div class="di shared-trigger" data-shared="founder" tabindex="0"><div class="dib">👤</div><div class="dil">FOUNDER</div></div>
-      </div>
-      <div class="icons-right">
-        <div class="di" data-win="em-about" tabindex="0"><div class="dib">🏢</div><div class="dil">ABOUT</div></div>
-        <div class="di shared-trigger" data-shared="news" tabindex="0"><div class="dib dib-o">📡</div><div class="dil">NEWS</div></div>
-        <div class="di shared-trigger" data-shared="contact" tabindex="0"><div class="dib">📨</div><div class="dil">CONTACT</div></div>
-        <div class="di shared-trigger" data-shared="faq" tabindex="0"><div class="dib">🤖</div><div class="dil">SIGIL</div></div>
-      </div>
-
-      <div class="hdr-widget">
-        <div class="hey">// DRAVKNOX STUDIOS</div>
-        <div class="hna">VELTRUN</div>
-        <div class="hsl">Louder than it needs to be. Exactly as intended.</div>
-        <div class="hdiv"></div>
-        <div class="htags">
-          <span class="htag">ROCK</span>
-          <span class="htag htag-o">NU METAL</span>
-          <span class="htag htag-b">SYNTHWAVE</span>
-          <span class="htag htag-o">CC0 REMIXES</span>
-        </div>
-      </div>
-
-      <!-- em-music, em-sfx, em-live removed. products coming soon. -->
-
-      <div class="win" id="em-about" style="width:310px;height:215px;top:66px;left:118px;">
-        <div class="wbar" data-win="em-about"><div class="wbtns"><button class="wb cl" data-close="em-about"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT VELTRUN</div></div>
-        <div class="wbody about-body">
-          <p class="ab-label">MUSIC DIVISION</p>
-          <p class="ab-text">Veltrun is the music arm. Rock, Nu Metal, Synthwave, remixed from CC0 sources and tuned for the games Embrvaal builds. Find it on YouTube. Turn it up. Your neighbours will adapt.</p>
-          <p class="ab-slogan">Louder than it needs to be. Exactly as intended.</p>
-        </div>
-      </div>
-
-      <div class="ticker-wrap">
-        <div class="tkl">VL</div>
-        <div class="tkt-track"><span class="tks">◈ VELTRUN: Rock, Nu Metal &amp; Synthwave remixes on YouTube</span><span class="tksep">///</span><span class="tks">CC0 sources. Zero compromise on volume.</span><span class="tksep">///</span><span class="tks">Scored for Embrvaal games</span><span class="tksep">///</span><span class="tks">Louder than it needs to be. Exactly as intended.</span><span class="tksep">///</span></div>
-      </div>
-
-      <div class="tbar">
-        <button class="sbtn" data-sm="em-sm">⬡ Payne-less UI: Great Grand-daddy</button>
-        <div class="tdiv"></div>
-        <div class="ttasks" id="em-tb"></div>
-        <div class="tdiv"></div>
-        <div class="tray">
-          <span class="trico">📡</span>
-          <span class="trico">🔊</span>
-          <div class="tclk" id="em-clk">--:--</div>
-        </div>
-      </div>
-
-      <button class="bbtn" data-back>← BOOT</button>
-
-      <div class="smenu" id="em-sm">
-        <div class="smhdr"><div class="smlogo">VELTRUN</div></div>
-        <div class="smi" data-win="em-about"><span class="si">🏢</span>About Division</div>
-        <div class="smi shared-trigger" data-shared="founder"><span class="si">👤</span>About Founder</div>
-        <div class="smi shared-trigger" data-shared="news"><span class="si">📡</span>News</div>
-        <div class="smi shared-trigger" data-shared="contact"><span class="si">📨</span>Contact</div>
-        <div class="smi shared-trigger" data-shared="faq"><span class="si">🤖</span>SIGIL</div>
-        <div class="smdiv"></div>
-        <div class="smi" data-back><span class="si">⬅</span>Boot Menu</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHARED WINDOWS: same across all three divisions. open from any desktop. -->
-
-  <!-- FOUNDER window: the about page. one person. many hats. -->
-  <div class="shared-win" id="sw-founder" style="width:420px;height:360px;top:60px;left:140px;">
-    <div class="wbar" data-win="sw-founder"><div class="wbtns"><button class="wb cl" data-close-shared="founder"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// ABOUT THE FOUNDER</div></div>
-    <div class="founder-layout">
-      <div class="founder-sidebar">
-        <div class="founder-avatar">FD</div>
-        <div class="founder-role">FOUNDER</div>
-        <div class="founder-titles">Developer<br>Lead Dev</div>
-        <div class="founder-divider"></div>
-        <div class="founder-links">
-        </div>
-      </div>
-      <div class="founder-content">
-        <div class="founder-name">DAKIEE</div>
-        <div class="founder-label">FOUNDER · LEAD DEVELOPER · DRAVKNOX STUDIOS</div>
-        <p class="founder-bio">Been building things across code, art, and music since 2020: separately, chaotically, and with zero plan. Dravknox Studios is what happened when it became obvious that trying to keep three creative lives apart was more work than just owning it. One person. Three divisions. Still no plan, but at least it has a name now.</p>
-        <div class="founder-skills-label">SKILLS</div>
-        <div class="founder-skills">
-          <span class="fskill fskill-nt">PYTHON DEV</span>
-          <span class="fskill fskill-nt">WEB APPS</span>
-          <span class="fskill fskill-gp">GODOT</span>
-          <span class="fskill fskill-gp">BLENDER</span>
-          <span class="fskill fskill-hz">AUDACITY</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- NEWS window: what happened recently. spoiler: rebrand. -->
-  <div class="shared-win" id="sw-news" style="width:390px;height:340px;top:80px;left:150px;">
-    <div class="wbar" data-win="sw-news"><div class="wbtns"><button class="wb cl" data-close-shared="news"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// STUDIO NEWS FEED</div></div>
-    <div class="wbody">
-      <div class="news-header">◈ ALL DIVISIONS · LATEST TRANSMISSIONS</div>
-      <div class="news-item" data-brand-news="all">
-        <div class="news-date">2026.05.01 · ALL DIVISIONS</div>
-        <div class="news-title">Dravknox Studios: rebrand underway</div>
-        <div class="news-body">New accounts, new releases, everything under one roof. The names are done. The products will be too. Please stand by.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTACT window: socials and channels. coming soon. stand by. -->
-  <div class="shared-win" id="sw-contact" style="width:360px;height:290px;top:90px;left:155px;">
-    <div class="wbar" data-win="sw-contact"><div class="wbtns"><button class="wb cl" data-close-shared="contact"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl">// CONTACT.EXE</div></div>
-    <div class="wbody">
-      <div class="news-header">◈ OPEN CHANNELS · ALL DIVISIONS</div>
-      <div class="contact-card contact-p" style="margin-top:12px;">
-        <div class="cc-label">STATUS</div>
-        <div class="cc-val">We're just getting started. The names are done, the channels will be too. Please Stand By.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ BOT: SIGIL. not AI. keyword matching with a great personality. -->
-  <div class="shared-win faq-win" id="sw-faq" style="width:420px;height:460px;top:55px;left:135px;">
-    <div class="wbar" data-win="sw-faq"><div class="wbtns"><button class="wb cl" data-close-shared="faq"></button><button class="wb mn"></button><button class="wb mx"></button></div>
-      <div class="wttl">// SIGIL · FAQ BOT</div>
-      <div class="faq-status"><div class="faq-dot"></div><span class="faq-status-txt">ONLINE</span></div>
-    </div>
-    <div class="faq-msgs" id="faq-msgs" role="log" aria-live="polite" aria-label="FAQ chat messages"></div>
-    <div class="faq-sugs" id="faq-sugs" aria-label="Suggested questions"></div>
-    <div class="faq-input-row">
-      <input type="text" id="faq-inp" class="faq-inp" placeholder="ask anything about the studio..." autocomplete="off" spellcheck="false" aria-label="Type your question"/>
-      <button class="faq-send" id="faq-send" aria-label="Send message">↗</button>
-    </div>
-  </div>
-
-  <!-- PROJECT DETAIL: opens when you click a project. tabs and everything. very professional. -->
-  <div class="shared-win proj-win" id="sw-proj" style="width:460px;height:420px;top:50px;left:120px;">
-    <div class="wbar" data-win="sw-proj"><div class="wbtns"><button class="wb cl" data-close-shared="proj"></button><button class="wb mn"></button><button class="wb mx"></button></div><div class="wttl" id="proj-wttl">// PROJECT</div></div>
-    <div class="proj-tabs" id="proj-tabs" role="tablist"></div>
-    <div class="proj-panels" id="proj-panels"></div>
-  </div>
-
-</div><!-- end of the whole thing. you made it. -->
-
-<script src="js/data.js"></script>
-<script src="js/faq.js"></script>
-<script src="js/projects.js"></script>
-<script src="js/os.js"></script>
 </body>
 </html>
